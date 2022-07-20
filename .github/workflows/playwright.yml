@@ -6,8 +6,6 @@ jobs:
   test:
     timeout-minutes: 60
     runs-on: windows-latest
-    container:
-      image: Functional-Automation-Testing-Engine--FATE-/playwright:v3.0.0
     timeout-minutes: 5
     steps:
     - uses: actions/checkout@v2
