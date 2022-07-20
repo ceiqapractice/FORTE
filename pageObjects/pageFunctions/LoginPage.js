@@ -3,7 +3,7 @@ const { testConfig } = require("../../testData/testData");
 const { webActions } = require("../../webActions/webActions");
 const { LoginPageElements } = require("../pageLocators/LoginPageElements");
 
-//Login page functionality
+//Login page functionality test
 class LoginPage{
     constructor(page) 
     {
