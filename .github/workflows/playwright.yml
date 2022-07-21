@@ -14,9 +14,6 @@ jobs:
         with:
          node-version: '14.1.0'
 
-     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
       - name: Install
         # NOTE: this pins the action to a specific commit sha for security
         # reasons but you can also use a version tag if desired. For example:
@@ -28,6 +25,3 @@ jobs:
         uses: ianwalter/playwright-container@43940dfa7d309fe3569b9df407ae9e84dcbf2e7f
         with:
           args: npx playwright test
-
-      - name: Run Playwright Tests # run tests
-        run: npx playwright test
