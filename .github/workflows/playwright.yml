@@ -16,6 +16,10 @@ jobs:
       run: npm ci
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
+    - name: docker pull
+      run: docker pull mcr.microsoft.com/playwright:v1.10.0-focal
+    - name: docker pull
+      run: docker run -it --rm --ipc=host mcr.microsoft.com/playwright:focal /bin/bash
     - name: Run Playwright tests
       run: npx playwright test
     - uses: actions/upload-artifact@v2
