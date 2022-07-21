@@ -9,24 +9,22 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2 # download code to github actions machine
-
       - uses: actions/setup-node@v2 # setup nodejs
         with:
          node-version: '14.1.0'
-
       - name: Install
-          run: npm ci
+         run: npm ci
       - name: Install Playwright Browsers
-          run: npx playwright install --with-deps
+         run: npx playwright install --with-deps
       - name: Pull docker image
-        run: docker pull mcr.microsoft.com/playwright:bionic
+         run: docker pull mcr.microsoft.com/playwright:bionic
       - name: Run docker image
-        run: docker container run -it --rm --ipc=host --security-opt seccomp=seccomp_profile.json mcr.microsoft.com/playwright:bionic /bin/bash
+         run: docker container run -it --rm --ipc=host --security-opt seccomp=seccomp_profile.json mcr.microsoft.com/playwright:bionic /bin/bash
       - name: Run Playwright tests
-        run: npx playwright test
+         run: npx playwright test
       - uses: actions/upload-artifact@v2
-        if: always()
-        with:
-        name: playwright-report
-        path: playwright-report/
-        retention-days: 30
+         if: always()
+         with:
+         name: playwright-report
+         path: playwright-report/
+         retention-days: 30
