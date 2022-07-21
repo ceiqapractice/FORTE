@@ -10,8 +10,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
-        with:
-          node-version: '14.x'
+      with:
+        node-version: '14.x'
       - name: Install
         # NOTE: this pins the action to a specific commit sha for security
         # reasons but you can also use a version tag if desired. For example:
