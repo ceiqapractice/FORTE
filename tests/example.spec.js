@@ -10,5 +10,6 @@ test("Login to the application", async ({page})=>
     const loginPageObj=new LoginPage(page);
     await webActionObj.navigateToURL();
     await loginPageObj.LoginToApps();
+    
 
   })
