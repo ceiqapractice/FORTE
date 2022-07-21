@@ -5,7 +5,7 @@ on:
 
 jobs:
   playwright-tests:
-    runs-on: macos-latest # or windows-latest, ubuntu-latest
+    runs-on: windows-latest # or windows-latest, ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2 # download code to github actions machine
