@@ -1,11 +1,9 @@
-name: Playwright Tests
+name: CI
 on:
   push:
     branches: [ master ]
 jobs:
-steps:
-  playwright:
-    name: 'Playwright Tests'
+  container-test-job:
     runs-on: windows-latest
     container:
       image: mcr.microsoft.com/playwright:v1.25.0-focal
