@@ -3,7 +3,6 @@ on:
   push:
     branches: [ master ]
 jobs:
-  container-test-job:
     runs-on: windows-latest
     container:
       image: mcr.microsoft.com/playwright:v1.25.0-focal
