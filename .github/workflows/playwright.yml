@@ -3,7 +3,6 @@ on:
   push:
     branches: [ master ]
 jobs:
-  jobs:
   npm-test:
     runs-on: windows-latest
     steps:
