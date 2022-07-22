@@ -1,0 +1,15 @@
+version: '3.7'
+services:
+ playwright:
+    image: mcr.microsoft.com/playwright:v1.24.0-focal
+    entrypoint: npx playwright test
+    ipc: host
+    working_dir: /tests
+    volumes:
+      - .:/tests:ro
+      # Videos, error screenshots and traces are stored in test-results:
+      - ./test-results:/app/test-results
+      # Snapshot results are stored alongside spec files:
+      - ./test:/app/test
+    depends_on:
+      - example
