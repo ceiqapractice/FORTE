@@ -10,7 +10,7 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 16
-      - run: docker-compose up -d
+      - run: docker-compose up
       - run: docker-compose down
         if: always()
       - uses: actions/upload-artifact@v2
