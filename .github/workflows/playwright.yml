@@ -11,6 +11,8 @@ jobs:
         with:
           node-version: 16
       - run: docker-compose up
+      - name: test
+      - run: docker run --network container:playwright-test -s --retry 10 --retry-connrefused http://localhost:5000/
       - run: docker-compose down
         if: always()
       - uses: actions/upload-artifact@v2
