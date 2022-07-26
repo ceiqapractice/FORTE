@@ -7,4 +7,4 @@ services:
       - "4444:4444"
     build:
       context: .
-      dockerfile: Dockerfile.focal
+      dockerfile: docker build . --file Dockerfile.focal
