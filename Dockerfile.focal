@@ -1,15 +1,11 @@
 # Use Base Image playwright:bionic
 FROM mcr.microsoft.com/playwright:v1.24.0-focal
 USER root
-WORKDIR /automation
-COPY package.json ./
-COPY package-lock.json ./
-COPY testData ./
+WORKDIR /tests
+COPY . .
 # Install Playwright dependancies
 RUN npm install
-COPY . ./
-# Install dependencies.
+# # # Install dependencies.
 RUN npx @playwright/test install
-# Run Tests
+# # # Run Tests
 RUN npx playwright test --reporter=list
-RUN npx playwright show-report

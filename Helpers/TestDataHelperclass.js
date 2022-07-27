@@ -1,7 +1,7 @@
 const { testConfiguration } = require("../testData/Config");
 const fs=require("fs")
 const path=require("path")
-var Testdatapath="./TestData/"
+var Testdatapath="./testData/"
 
 class TestDataHelper{
 loadobject(filepath){

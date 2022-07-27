@@ -9,8 +9,8 @@ const config = {
   projects: [
     {   
       use: {
-        browserName:"chrome",
-        headless:false
+        browserName:"chromium",
+        headless:true
       },
     },
   ],
