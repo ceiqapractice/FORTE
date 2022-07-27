@@ -10,5 +10,5 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 16
-      - run: docker build . --file Dockerfile.focal -t ganesh_2146
+      - run: docker build . --file Dockerfile.focal
       - run: docker-compose down   
