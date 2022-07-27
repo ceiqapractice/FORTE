@@ -9,7 +9,7 @@ const config = {
   projects: [
     {   
       use: {
-        browserName:"chromium",
+        browserName:"firefox",
         headless:true
       },
     },
