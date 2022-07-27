@@ -8,4 +8,4 @@ RUN npm install
 # # # Install dependencies.
 RUN npx @playwright/test install
 # # # Run Tests
-RUN npx playwright test --reporter=line
+RUN npx playwright test --reporter=html
