@@ -8,4 +8,6 @@ RUN npm install
 # # # Install dependencies.
 RUN npx @playwright/test install
 # # # Run Tests
-RUN npx playwright test --reporter=html --config playwright.config.js
+RUN npx playwright test
+#### report genreation
+RUN npx playwright show-report
