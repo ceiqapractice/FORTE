@@ -2,10 +2,10 @@
 FROM mcr.microsoft.com/playwright:v1.24.0-focal
 USER root
 WORKDIR /tests
-#COPY . .
+COPY . .
 # Install Playwright dependancies
 RUN npm install
 # # # Install dependencies.
 RUN npx @playwright/test install
 # # # Run Tests
-RUN npx playwright test --reporter=list
+RUN npx playwright test --reporter=line
