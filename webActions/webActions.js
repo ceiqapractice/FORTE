@@ -1,4 +1,6 @@
+const { selectors } = require("@playwright/test");
 const { testConfig } = require("../testData/testData");
+
 class webActions
 {
     constructor(page) 
@@ -19,6 +21,12 @@ class webActions
     {
         await this.page.fill(locator, text);
     } 
+
+    async getAllElements()
+    { 
+        await this.page.Wait
+        
+    }
 
 }
 
