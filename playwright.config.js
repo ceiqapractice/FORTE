@@ -5,7 +5,7 @@ const config = {
   expect: {
     timeout: 5000
   },
-  reporter: ['list','line','dot',['html', { open: 'never' }],],
+  reporter: 'line',
   projects: [
     {   
       use: {
