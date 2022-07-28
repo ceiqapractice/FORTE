@@ -14,4 +14,4 @@ jobs:
         if: always()
       - uses: actions/upload-artifact@v2
         with:
-        path: playwright-reports
+          path: playwright-reports
