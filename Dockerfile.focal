@@ -10,6 +10,7 @@ RUN npm install
 RUN npx @playwright/test install
 # # # Run Tests
 #RUN npx playwright test --reporter=list
-RUN npx playwright test --reporter=line
+RUN npx playwright test
+COPY index.html .
 #RUN npx playwright test --reporter=dot
 #RUN npx playwright test --reporter=html
