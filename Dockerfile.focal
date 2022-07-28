@@ -9,5 +9,3 @@ RUN npm install
 RUN npx @playwright/test install
 # # # Run Tests
 RUN npx playwright test
-#### report genreation
-RUN npx playwright show-report
