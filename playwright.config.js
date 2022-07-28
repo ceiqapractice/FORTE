@@ -5,7 +5,7 @@ const config = {
   expect: {
     timeout: 5000
   },
-  reporter:  process.env.CI ? 'dot' : 'list',
+  reporter: process.env.CI ? 'github' : 'list',
   projects: [
     {   
       use: {
