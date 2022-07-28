@@ -5,7 +5,7 @@ const config = {
   expect: {
     timeout: 5000
   },
-  reporter: [ ['html', { open: 'always' }] ],
+  reporter:  process.env.CI ? 'dot' : 'list',
   projects: [
     {   
       use: {
