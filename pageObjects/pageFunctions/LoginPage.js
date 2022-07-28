@@ -17,8 +17,8 @@ class LoginPage{
         let DataHandlertest=new DataHandler("LoginPage");
         console.log(DataHandlertest.getdata().Username)
         console.log(DataHandlertest.getdata().Password)
-        await this.webActionsObj.enterElementText(LoginPageElements.EMAIL_EDITBOX_ID,DataHandlertest.getdata().Username);
-        await this.webActionsObj.enterElementText(LoginPageElements.PASSWORD_EDITBOX_ID,DataHandlertest.getdata().Password);
+        await this.webActionsObj.enterElementText(LoginPageElements.EMAIL_EDITBOX_ID,DataHandlertest.getdata().Username1);
+        await this.webActionsObj.enterElementText(LoginPageElements.PASSWORD_EDITBOX_ID,DataHandlertest.getdata().Password1);
         await this.webActionsObj.clickElement(LoginPageElements.SUBMIT_BUTTON_ID); 
     }
 }
