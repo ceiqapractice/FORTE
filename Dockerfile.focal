@@ -11,6 +11,6 @@ RUN npx @playwright/test install
 # # # Run Tests
 #RUN npx playwright test --reporter=list
 RUN npx playwright test
-COPY my-report/index.html .
+COPY /my-report/index.html .
 #RUN npx playwright test --reporter=dot
 #RUN npx playwright test --reporter=html
