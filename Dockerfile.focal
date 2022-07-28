@@ -14,3 +14,4 @@ RUN npx playwright test
 RUN npx playwright show-report my-report
 #RUN npx playwright test --reporter=dot
 #RUN npx playwright test --reporter=html
+#npx playwright test -g "@Regression$"

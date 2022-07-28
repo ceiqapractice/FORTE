@@ -5,10 +5,21 @@ const { DataHandler } = require("../testData/Datahandler");
 const { webActions } = require("../webActions/webActions");
 
 
-test("Login to the application", async ({page})=>
+test("@Regression", async ({page})=>
   {
     const webActionObj =new webActions(page);
     const loginPageObj=new LoginPage(page);
+    console.log("Regression exmaple1");
+    await webActionObj.navigateToURL();
+    console.log("Page navigation");
+    await loginPageObj.LoginToApps();
+  })
+
+  test("@Smoke", async ({page})=>
+  {
+    const webActionObj =new webActions(page);
+    const loginPageObj=new LoginPage(page);
+    console.log("Regression");
     await webActionObj.navigateToURL();
     console.log("Page navigation");
     await loginPageObj.LoginToApps();
