@@ -10,9 +10,10 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 16
-      - run: docker build . --file Dockerfile.focal
+      - run: docker build . -d --file Dockerfile.focal --name crate
+      - run: docker cp crate:/tests/playwright_report/ ./reports
       - name: Upload test results
         if: always()
         uses: actions/upload-artifact@v2
         with:
-          path: playwright_report
+          path: ./reports

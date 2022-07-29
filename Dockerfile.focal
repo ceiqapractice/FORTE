@@ -11,6 +11,7 @@ RUN npx @playwright/test install
 # # # Run Tests
 #RUN npx playwright test --reporter=list
 RUN npx playwright test -g "@Regression$"
+COPY CRATE:./playwright_report ./Report
 #RUN npx playwright test --reporter=dot
 #RUN npx playwright test --reporter=html
 #npx playwright test -g "@Regression$"
