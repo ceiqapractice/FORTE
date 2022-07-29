@@ -10,7 +10,7 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 16
-      - run: docker build . --file Dockerfile.focal --name crate
+      - run: docker build . --file Dockerfile.focal -t crate
       - run: docker run -it crate /bin/bash
       - run: npm install
       - run: npx @playwright/test install
