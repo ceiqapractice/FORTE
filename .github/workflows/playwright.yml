@@ -14,6 +14,7 @@ jobs:
       - run: docker run crate /bin/bash
       - run: npm install
       - run: npx @playwright/test install
+      - run: npx playwright test -g "@Regression$"
       - name: Upload test results
         if: always()
         uses: actions/upload-artifact@v2
