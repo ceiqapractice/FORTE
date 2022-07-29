@@ -11,6 +11,3 @@ jobs:
         with:
           node-version: 16
       - run: docker build . --file Dockerfile.focal
-      - run: npm install
-      - run: npx @playwright/test install
-      - run: npx playwright test
