@@ -11,12 +11,13 @@ jobs:
         with:
           node-version: 16
       - run: docker build . --file Dockerfile.focal -t crate
-      - run: docker run crate /bin/bash
+      - run: docker run -d crate /bin/bash
       - run: npm install
       - run: npx @playwright/test install
       - run: npx playwright test -g "@Regression$"
+      - run: docker cp crate:/playwright-report ./Reports
       - name: Upload test results
         if: always()
         uses: actions/upload-artifact@v2
         with:
-          path: playwright-report
+          path: Reports
