@@ -6,7 +6,7 @@ const config = {
   expect: {
     timeout: 5000
   },
-  reporter: [ ['html', { outputFolder: './playwright-report/'+ Date.now()}]],
+  reporter: [ ['html', { outputFolder: './playwright_report/'+ Date.now()}]],
   projects: [
     {   
       use: {

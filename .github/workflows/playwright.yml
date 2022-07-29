@@ -15,4 +15,4 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v2
         with:
-          path: playwright-report
+          path: playwright_report
