@@ -17,6 +17,7 @@ jobs:
       - run: npx @playwright/test install
       - run: npx playwright test -g "@Regression$"
       - run: docker ps
+      - run: ls
       - run: docker cp plimage:/tests/playwright_report ./Reports
       - name: Upload test results
         if: always()
