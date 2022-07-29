@@ -5,12 +5,12 @@ RUN mkdir /tests
 COPY . /tests
 WORKDIR /tests
 # Install Playwright dependancies
-#RUN npm install
+RUN npm install
 # # # Install dependencies.
-#RUN npx @playwright/test install
+RUN npx @playwright/test install
 # # # Run Tests
 #RUN npx playwright test --reporter=list
-#RUN npx playwright test -g "@Regression$"
+RUN npx playwright test -g "@Regression$"
 #RUN npx playwright test --reporter=dot
 #RUN npx playwright test --reporter=html
 #npx playwright test -g "@Regression$"

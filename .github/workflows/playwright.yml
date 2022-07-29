@@ -10,9 +10,4 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 16
-      - run: docker build . --file Dockerfile.focal -t crate
-      - run: docker run -it -d --name plimage crate /bin/bash
-      - run: docker exec plimage /bin/bash
-      - run: npm install
-      - run: npx @playwright/test install
-      - run: npx playwright test -g "@Regression$"
+      - run: docker build . --file Dockerfile.focal -t
