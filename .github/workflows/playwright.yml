@@ -12,6 +12,6 @@ jobs:
           node-version: 16
       - run: docker build . --file Dockerfile.focal
         if: always()
-        uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v2
         with:
-          path: Reports
+          path: ./Reports
