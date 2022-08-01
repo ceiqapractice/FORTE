@@ -11,8 +11,10 @@ const config = {
     {   
       use: {
         browserName:"firefox",
-        headless:true
+        headless:true,
+        screenshot: 'on'
       },
+  
     },
   ],
 };
