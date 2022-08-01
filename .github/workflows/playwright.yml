@@ -12,5 +12,5 @@ jobs:
           node-version: 16
       - run: docker build . --file Dockerfile.focal -t plimage
       - run: docker run -d --name plcontainer plimage
-      - run: docker cp plcontainer:./tests/playwright_report /reports
+      - run: sudo docker cp plcontainer:./tests/playwright_report /reports
       - run: ls /reports
