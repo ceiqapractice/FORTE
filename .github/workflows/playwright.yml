@@ -16,4 +16,4 @@ jobs:
       - run: ls /reports
       - uses: actions/upload-artifact@v2
         with:
-          path: ./reports
+          path: /reports
