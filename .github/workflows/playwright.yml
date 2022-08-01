@@ -12,6 +12,5 @@ jobs:
           node-version: 16
       - run: docker build . --file Dockerfile.focal -t plimage
       - run: docker run -d --name plcontainer plimage
-      - run: docker exec -it plcontainer /bin/bash
-      - run: npx playwright test -g "@Regression$"
-      # - run: docker cp plcontainer:./tests/playwright_report /reports
+      - run: docker cp plcontainer:./tests/playwright_report /reports
+      - run: ls /reports
