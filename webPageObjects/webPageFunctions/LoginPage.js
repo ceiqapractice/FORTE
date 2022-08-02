@@ -1,7 +1,7 @@
-const { DataHandler } = require("../../testData/Datahandler");
-const { testConfig } = require("../../testData/testData");
-const { webActions } = require("../../webActions/webActions");
-const { LoginPageElements } = require("../pageLocators/LoginPageElements");
+const { DataHandler } = require("../../webTestData/Datahandler");
+const { testConfig } = require("../../webTestData/testData");
+const { webActions } = require("../../webPageActions/webActions");
+const { LoginPageElements } = require("../webPageLocators/LoginPageElements");
 
 //Login page functionality test
 class LoginPage{

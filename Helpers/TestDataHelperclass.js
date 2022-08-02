@@ -1,7 +1,7 @@
-const { testConfiguration } = require("../testData/Config");
+const { testConfiguration } = require("../webTestData/Config");
 const fs=require("fs")
 const path=require("path")
-var Testdatapath="./testData/"
+var Testdatapath="./webTestData/"
 
 class TestDataHelper{
 loadobject(filepath){
