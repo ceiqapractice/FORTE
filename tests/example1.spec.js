@@ -5,7 +5,7 @@ const { DataHandler } = require("../testData/Datahandler");
 const { webActions } = require("../webActions/webActions");
 
 
-test("@Regression @Smoke", async ({page})=>
+test("@Regression", async ({page})=>
   {
     const webActionObj =new webActions(page);
     const loginPageObj=new LoginPage(page);
