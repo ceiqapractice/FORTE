@@ -2,7 +2,7 @@ const {test}=require("@playwright/test");
 const { log } = require("util");
 const { LoginPage } = require("../webPageObjects/webPageFunctions/LoginPage");
 const { webActions } = require("../webPageActions/webActions");
-const { DataHandler } = require("../testData/Datahandler");
+const { DataHandler } = require("../TestData/Datahandler");
 
 
 test("@Regression", async ({page})=>
