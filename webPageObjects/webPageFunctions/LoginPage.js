@@ -1,4 +1,4 @@
-const { DataHandler } = require("../../testData/Datahandler");
+const { DataHandler } = require("../../TestData/Datahandler");
 const { testConfig } = require("../../TestData/webTestData/testData");
 const { webActions } = require("../../webPageActions/webActions");
 const { LoginPageElements } = require("../webPageLocators/LoginPageElements");
