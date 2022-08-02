@@ -1,7 +1,8 @@
-const { testConfiguration } = require("../webTestData/Config");
+const { testConfiguration } = require("../TestData/webTestData/Config");
 const fs=require("fs")
 const path=require("path")
-var Testdatapath="./webTestData/"
+var webTestdatapath="./TestData/webTestData/"
+
 
 class TestDataHelper{
 loadobject(filepath){
@@ -29,14 +30,14 @@ jsonreader(module){
         let Envobject={};
         let Langobject={};
         let defaultobject={};
-        var filepath= Testdatapath + module +"/"+module+".json"; 
+        var filepath= webTestdatapath + module +"/"+module+".json"; 
         defaultobject=this.loadobject(filepath);
         if(testConfiguration.Env!=""){
-            var Envfilepath= Testdatapath + module +"/"+module+"."+testConfiguration.Env+".json";
+            var Envfilepath= webTestdatapath + module +"/"+module+"."+testConfiguration.Env+".json";
             Envobject=this.loadobject(Envfilepath);            
         }
         if(testConfiguration.Language!=""){
-            var Langfilepath= Testdatapath + module +"/"+module+"."+testConfiguration.Language+".json";
+            var Langfilepath= webTestdatapath + module +"/"+module+"."+testConfiguration.Language+".json";
             Langobject=this.loadobject(Langfilepath);            
         }
         const Finalobject=this.combine(defaultobject,Envobject);

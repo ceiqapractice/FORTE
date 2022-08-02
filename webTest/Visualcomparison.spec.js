@@ -1,6 +1,5 @@
 const {test,expect} = require('@playwright/test');
-const { testConfig } = require("../webTestData/testData");
-
+const { testConfig } = require('../TestData/webTestData/testData');
 
 let links=[];
 let baseURL=testConfig.baseURL;

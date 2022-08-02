@@ -1,5 +1,6 @@
 const { selectors } = require("@playwright/test");
-const { testConfig } = require("../webTestData/testData");
+const { testConfig } = require("../TestData/webTestData/testData");
+
 
 class webActions
 {
