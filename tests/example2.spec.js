@@ -9,7 +9,7 @@ test("@Regression", async ({page})=>
   {
     const webActionObj =new webActions(page);
     const loginPageObj=new LoginPage(page);
-    console.log("Regression example2");
+    console.log("Regression Example2");
     await webActionObj.navigateToURL();
     console.log("Page navigation");
     await loginPageObj.LoginToApps();
@@ -19,7 +19,7 @@ test("@Regression", async ({page})=>
   {
     const webActionObj =new webActions(page);
     const loginPageObj=new LoginPage(page);
-    console.log("Regression");
+    console.log("Smoke Example2");
     await webActionObj.navigateToURL();
     console.log("Page navigation");
     await loginPageObj.LoginToApps();

@@ -10,7 +10,7 @@ RUN npm install
 RUN npx @playwright/test install
 # # # Run Tests
 #RUN npx playwright test --reporter=list
-RUN npx playwright test -g "@Regression$"
+RUN npx playwright test -g "@Smoke$"
 # COPY ./playwright_report ./Report
 #COPY crate:./playwright_report ./Report
 #RUN npx playwright test --reporter=dot

@@ -21,13 +21,6 @@ class webActions
     {
         await this.page.fill(locator, text);
     } 
-
-    async getAllElements()
-    { 
-        await this.page.Wait
-        
-    }
-
 }
 
 module.exports={webActions}
