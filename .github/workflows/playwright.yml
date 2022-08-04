@@ -12,7 +12,6 @@ jobs:
           node-version: 16.*
       - run: docker build . --file Dockerfile.focal -t plimage
       - run: docker run -d --name plcontainer plimage
-      - run: sudo docker cp plcontainer:./tests/allure-report /reports
       - run: sudo docker cp plcontainer:./tests/allure-results /reports
       - run: ls /reports
       - uses: actions/upload-artifact@v2
