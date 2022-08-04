@@ -1,1 +1,0 @@
-Smoke test Crate 002
