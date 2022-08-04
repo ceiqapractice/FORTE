@@ -9,11 +9,12 @@ const config = {
     timeout: 5000,
     toMatchSnapshot:{threshold:0.05}
   },
-  reporter: [ ['html', { outputFolder: './playwright_report/'+ ReportDate}]],
+  //reporter: [ ['html', { outputFolder: './playwright_report/'+ ReportDate}]],
+  reporter: [['experimental-allure-playwright']],
   projects: [
     {   
       use: {
-        browserName:"chromium",
+        browserName:"firefox",
         headless:true,
       },
   
