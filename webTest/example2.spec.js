@@ -19,7 +19,7 @@ test("@Regression", async ({page})=>
   {
     const webActionObj =new webActions(page);
     const loginPageObj=new LoginPage(page);
-    console.log("Smoke test Example 2");
+    console.log("Smoke test Crate 2");
     await webActionObj.navigateToURL();
     console.log("Page navigation");
     await loginPageObj.LoginToApps();
