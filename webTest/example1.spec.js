@@ -14,7 +14,7 @@ test("@Regression", async ({page})=>
     console.log("Page navigation");
     await loginPageObj.LoginToApps();
   })
-
+  
   test("@Smoke", async ({page})=>
   {
     const webActionObj =new webActions(page);
