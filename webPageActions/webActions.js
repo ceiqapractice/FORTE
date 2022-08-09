@@ -34,8 +34,9 @@ class webActions
         const dropdown=this.page.locator(locator);
         await dropdown.selectOption(index);
     }
-
     
+    
+
 
 }
 
