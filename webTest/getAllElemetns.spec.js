@@ -7,7 +7,7 @@ const domToPlaywright = require('dom-to-playwright').default;
 
 
 
-test("@allelements", async ({ page }) => {
+test("@allelements test", async ({ page }) => {
 
   //await page.goto("https://parabank.parasoft.com/parabank/index.htm");
   await page.goto("https://opensource-demo.orangehrmlive.com/index.php/auth/login");
