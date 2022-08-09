@@ -19,7 +19,7 @@ test("@Regression", async ({page})=>
   {
     const webActionObj =new webActions(page);
     const loginPageObj=new LoginPage(page);
-    console.log("Smoke test execution2");
+    console.log("Smoke forte test execution2");
     await webActionObj.navigateToURL();
     await loginPageObj.LoginToApps();
   })
