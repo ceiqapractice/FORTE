@@ -16,6 +16,7 @@ const config = {
       use: {
         browserName:"firefox",
         headless:true,
+        video: 'on'
       },
   
     },

@@ -22,6 +22,21 @@ class webActions
     {
         await this.page.fill(locator, text);
     } 
+
+    async selectOptionByText(locator, option)
+    {
+        const dropdown=this.page.locator(locator);
+        await dropdown.selectOption(option);
+    }
+    
+    async selectOptionByIndex(locator, index)
+    {
+        const dropdown=this.page.locator(locator);
+        await dropdown.selectOption(index);
+    }
+
+    
+
 }
 
 module.exports={webActions}
