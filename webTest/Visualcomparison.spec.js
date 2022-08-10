@@ -17,7 +17,7 @@ async function comparepage(filepath,page){
         return new Promise(resolve => setTimeout(resolve, milliseconds))
     }
 
-test("@visual",async ({ page }) => {  
+test.skip("@visual",async ({ page }) => {  
     const  link = await import("linkinator");
     const results = await link.check({
       path: baseURL,

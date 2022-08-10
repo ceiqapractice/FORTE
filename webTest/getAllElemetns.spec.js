@@ -3,11 +3,13 @@
 const { test, selectors } = require("@playwright/test");
 const { xPath } = require("playwright-dompath");
 const { timeout } = require("../playwright.config");
+const { webActions } = require("../webPageActions/webActions");
 const domToPlaywright = require('dom-to-playwright').default;
 
 
 
-test("@allelements testing", async ({ page }) => {
+
+test("@allelements", async ({ page }) => {
 
   //await page.goto("https://parabank.parasoft.com/parabank/index.htm");
   await page.goto("https://opensource-demo.orangehrmlive.com/index.php/auth/login");
@@ -20,6 +22,11 @@ test("@allelements testing", async ({ page }) => {
    {
     console.log(await p.getAttribute('id'));
    }
+   const webActionObj=new webActions(page);
+   await webActionObj.pageRefresh();
+   const pageTitle=await webActionObj.getCurrentWindowTitle();
+   console.log(pageTitle);
+   
   // console.log('*********');
   // console.log("Hi");
 
