@@ -65,11 +65,6 @@ class webActions
         await this.page.locator(locator).uncheck()
     }
 
-    async getCurrentWindowTitle()
-    {
-        await this.page.title();
-    }
-
 
 }
 
