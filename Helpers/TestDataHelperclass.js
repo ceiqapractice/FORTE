@@ -1,8 +1,7 @@
 const { testConfiguration } = require("../TestData/webTestData/Config");
 const fs=require("fs")
 const path=require("path")
-var webTestdatapath="./TestData/webTestData/"
-
+var webTestdatapath="./TestData/webTestData/";
 
 class TestDataHelper{
 loadobject(filepath){
@@ -15,7 +14,7 @@ loadobject(filepath){
         else
         {
             let def={};
-            console.log("Data File not Present for this module in the specified path :" +filepath);
+            console.log("Data File not Present for this module in the specified path :" +path.join(process.cwd(),filepath));
             return def;
         }    
     }

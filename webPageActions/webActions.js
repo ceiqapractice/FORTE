@@ -4,13 +4,14 @@ const { testConfig } = require("../TestData/webTestData/testData");
 
 class webActions
 {
+    
     constructor(page) 
     {
         this.page = page;
     }
     async navigateToURL() 
     {
-        await this.page.goto(testConfig.dev);
+        await this.page.goto(testConfig.url);
      }
 
      async clickElement(locator) 
@@ -64,6 +65,8 @@ class webActions
     {
         await this.page.locator(locator).uncheck()
     }
+   
+    
     async acceptAlert(alertText, verificationlocator, verficationText) {
 
         this.page.on('dialog', async (dialog) => {
