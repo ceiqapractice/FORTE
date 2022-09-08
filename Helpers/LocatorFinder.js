@@ -1,9 +1,9 @@
-const { testConfiguration } = require("../TestData/webTestData/Config");
-const { TestDataHelper } = require("../Helpers/TestDataHelperclass");
+const { TestDataHelper } = require("./testDataHelperclass");
 const fs=require("fs")
 const path=require("path")
-var webTestdatapath="./TestData/webTestData/"
-let webpageLocatorsBasePath = webTestdatapath +  "webPageLocators/";
+//var webTestdatapath="./webPageObjects/"
+//let webpageLocatorsBasePath = webTestdatapath +  "webPageLocators/";
+let webpageLocatorsBasePath = "./locators/";
 
 class LocatorFinder{
 
@@ -21,11 +21,10 @@ class LocatorFinder{
         }
         this.locators = returnObject;
     }
-
     async getavailableLocator(allLocators) {
         
         let availableLocator;
-        if (allLocators.str instanceof Array) {
+        if (allLocators instanceof Array) {
             for (let i = 0; i < allLocators.length; i++) {
                 const count = await this.page.locator(allLocators[i]).count();
                 // console.log(count)
@@ -34,13 +33,14 @@ class LocatorFinder{
                     break;
                 }
             }
-        } else if (await this.page.locator(allLocators).count() > 0){
-            //assuming that the locator is a string; not another json object
-            availableLocator = allLocators;
+        } else {
+            let loc = await this.page.locator(allLocators);
+            if (loc !== 'undefined'){
+                //assuming that the locator is a string; not another json object
+                availableLocator = allLocators;
+            }   
         }
         return availableLocator;
     }
-
-
 }
 module.exports={LocatorFinder}

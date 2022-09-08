@@ -1,8 +1,8 @@
 const {test}=require("@playwright/test");
 const { log } = require("util");
-const { LoginPage } = require("../webPageObjects/webPageFunctions/LoginPage");
-const { webActions } = require("../webPageActions/webActions");
-const { DataHandler } = require("../TestData/Datahandler");
+const { webActions } = require("../../main/web/commonFunctions/webActions");
+const { LoginPage } = require("../../main/web/pageFunctions/LoginPage");
+
 
 
 test("@Regression", async ({page})=>
@@ -19,7 +19,8 @@ test("@Regression", async ({page})=>
   {
     const webActionObj =new webActions(page);
     const loginPageObj=new LoginPage(page);
-    console.log("Smoke forte test execution1");
+    console.log("Regression Example1");
     await webActionObj.navigateToURL();
+    console.log("Page navigation");
     await loginPageObj.LoginToApps();
   })

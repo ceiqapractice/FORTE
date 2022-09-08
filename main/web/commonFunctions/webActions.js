@@ -1,23 +1,22 @@
 const { selectors } = require("@playwright/test");
-const { testConfig } = require("../TestData/webTestData/testData");
+const { testConfig } = require("../../../baseConfig");
 
 
 class webActions
 {
-    
     constructor(page) 
     {
         this.page = page;
     }
     async navigateToURL() 
     {
-        await this.page.goto(testConfig.url);
+        await this.page.goto(testConfig.dev);
      }
 
      async clickElement(locator) 
      {  
         await this.page.click(locator);
-    }
+     }
 
     async enterText(locator, text)
     {
@@ -65,8 +64,6 @@ class webActions
     {
         await this.page.locator(locator).uncheck()
     }
-   
-    
     async acceptAlert(alertText, verificationlocator, verficationText) {
 
         this.page.on('dialog', async (dialog) => {

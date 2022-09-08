@@ -1,11 +1,9 @@
-const { TestDataHelper } = require("../Helpers/TestDataHelperclass");
-
+const { TestDataHelper } = require("./testDataHelperclass");
 var logindata={};
-
 class DataHandler{ 
-    constructor(moduletype){
+    constructor(moduletype,testType){
     let testdatahelper=new TestDataHelper();
-    const dataset=testdatahelper.jsonreader(moduletype);
+    const dataset=testdatahelper.jsonreader(moduletype,testType);
     if(Object.keys(dataset).length > 0)
     {    
     let array=Object.keys(dataset);
