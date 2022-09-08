@@ -10,7 +10,7 @@ RUN npm install
 RUN npx @playwright/test install
 # # # Run Tests
 #RUN npx playwright test --reporter=list
-RUN npx playwright test -g "@Smoke$"
+#RUN npx playwright test -g "@Smoke$"
 RUN npx playwright test -g "@Smoke$" --reporter=experimental-allure-playwright
 #RUN npx allure generate ./allure-results --clean
 # COPY ./playwright_report ./Report
