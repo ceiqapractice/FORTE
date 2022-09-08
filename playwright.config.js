@@ -9,8 +9,13 @@ const config = {
     timeout: 5000,
     toMatchSnapshot:{threshold:0.05}
   },
+<<<<<<< HEAD
   //reporter: [ ['html', { outputFolder: './playwright-report/'+ ReportDate}]],
   //reporter: [ ['html', { outputFolder: './playwright-report/'}]],
+=======
+  ///reporter: [ ['html', { outputFolder: './playwright-report/'+ ReportDate}]],
+  ///reporter: [ ['html', { outputFolder: './playwright-report/'}]],
+>>>>>>> cf43134408f059852115441ab6e74b42ee5bfa3b
   reporter: [ ['experimental-allure-playwright']],
   projects: [
     {   
