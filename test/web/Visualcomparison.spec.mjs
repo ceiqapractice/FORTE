@@ -1,12 +1,12 @@
-const fs =require("fs");
-const path=require("path")
-const {test,expect} = require('@playwright/test');
-
-
-
+import fs from "fs"
+import path from "path"
+import {test,expect} from "@playwright/test"
+import {testConfig} from "../../baseConfig.js";
 let links=[];
-//const foldertobetested="08102022";
-//let baseURL="https://www.ceiamerica.com/"
+const foldertobetested=testConfig.visualComparisonDate;
+let baseURL=testConfig.baseURL;
+console.log(foldertobetested);
+console.log(baseURL);
 
 async function comparepage(filepath,page){
     try{
@@ -16,11 +16,11 @@ async function comparepage(filepath,page){
       console.log(err);
     }}
 
-test('Visual comparison of all pages',async ({ page }) => {  
+test('@Visual_comparison',async ({ page }) => {  
     const link = await import("linkinator");
     const results = await link.check({
       path: baseURL,
-      //:["https://www.facebook.com","https://twitter.com","https://www.linkedin.com","https://www.ceiamerica.com/wp","https://share.hsforms.com/","https://js.hs-scripts.com/","https://fonts.googleapis.com/","https://www.googletagmanager.com/"]
+      linksToSkip: testConfig.linksToSkip
     });
 await results
   let array1=results.links
@@ -45,7 +45,7 @@ await results
       }
       let filename2=filename1+"-win32.png";
       let screenshtplace="Visualcomparisonscreenshots/"+foldertobetested+"/"+filename2;
-      let screenshotdest="tests/visualcomparison.spec.js-snapshots/"+filename2;
+      let screenshotdest="test/web/visualcomparison.spec.mjs-snapshots/"+filename2;
       if(fs.existsSync(path.join(process.cwd(),screenshtplace))){
         await fs.copyFileSync(screenshtplace,screenshotdest);
         await comparepage(filename1+".png",page);

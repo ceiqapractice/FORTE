@@ -1,5 +1,5 @@
 const { selectors } = require("@playwright/test");
-const { testConfig } = require("../TestData/webTestData/testData");
+const { testConfig } = require("../../../baseConfig");
 
 
 class webActions
@@ -16,7 +16,7 @@ class webActions
      async clickElement(locator) 
      {  
         await this.page.click(locator);
-    }
+     }
 
     async enterText(locator, text)
     {

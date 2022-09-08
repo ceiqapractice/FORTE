@@ -70,6 +70,7 @@ async check_responsetime(response){
         assert(size > 10000, "Download size vs speed issue");
 }
 }
+
 }
 
 

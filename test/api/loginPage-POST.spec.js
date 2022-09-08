@@ -1,14 +1,13 @@
 const { test } = require('@playwright/test');
-const { CRUDMethods } = require('../APIActions/CRUDMethods');
+const { CRUDMethods } = require('../../main/api/CRUDMethods');
 const {expect,assert} = require('chai');
-const { CommonMethods } = require('../APIActions/CommonMethods');
-const { DataHandler } = require('../TestData/webTestData/Datahandler');
+const { CommonMethods } = require('../../main/api/CommonMethods');
+const { DataHandler } = require('../../Helpers/Datahandler');
 const datahandler = new DataHandler("testdata");
 const faker = require('@faker-js/faker');
 
 
-
-test('POST METHOD -path Parameters - Posting User name & email data', async ({request}) => {
+test('@POST METHOD -path Parameters - Posting User name & email data', async ({request}) => {
   const data = {
     
   "name":faker.faker.lorem.sentence(),

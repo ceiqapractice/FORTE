@@ -1,15 +1,21 @@
-const { testConfiguration } = require("../TestData/webTestData/Config");
+const { testConfig } = require("../baseConfig");
 const fs=require("fs")
 const path=require("path")
-var webTestdatapath="./TestData/webTestData/"
 
+let Testdatapath;
 
 class TestDataHelper{
 loadobject(filepath){
     try{
         if(fs.existsSync(path.join(process.cwd(),filepath))){
+            console.log("path " + path.join(process.cwd(),filepath));
         let defaultrawdata = fs.readFileSync(path.join(process.cwd(),filepath),'utf-8');
-        const defaultobject=JSON.parse(defaultrawdata);   
+
+        if(defaultrawdata === 'undefined')
+        console.log("is undefined");
+
+        const defaultobject=JSON.parse(defaultrawdata);
+        console.log("default object --> " + defaultobject[0]);   
         return defaultobject; 
         }
         else
@@ -24,20 +30,30 @@ loadobject(filepath){
     }
 }
 
-jsonreader(module){
+jsonreader(module,testType){
     try {   
 
         let Envobject={};
         let Langobject={};
         let defaultobject={};
-        var filepath= webTestdatapath + module +"/"+module+".json"; 
+
+        if (testType.toLocaleLowerCase() == 'web'){
+             Testdatapath="./testData/webTestData/"
+        }
+        else if(testType.toLocaleLowerCase() == 'api')
+        {
+             Testdatapath="./testData/apiTestData/"
+
+        }
+        var filepath= Testdatapath + module +"/"+module+".json";
+        console.log(filepath);
         defaultobject=this.loadobject(filepath);
-        if(testConfiguration.Env!=""){
-            var Envfilepath= webTestdatapath + module +"/"+module+"."+testConfiguration.Env+".json";
+        if(testConfig.Env!=""){
+            var Envfilepath= Testdatapath + module +"/"+module+"."+testConfig.Env+".json";
             Envobject=this.loadobject(Envfilepath);            
         }
-        if(testConfiguration.Language!=""){
-            var Langfilepath= webTestdatapath + module +"/"+module+"."+testConfiguration.Language+".json";
+        if(testConfig.Language!=""){
+            var Langfilepath= Testdatapath + module +"/"+module+"."+testConfig.Language+".json";
             Langobject=this.loadobject(Langfilepath);            
         }
         const Finalobject=this.combine(defaultobject,Envobject);
