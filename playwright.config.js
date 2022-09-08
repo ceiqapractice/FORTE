@@ -9,8 +9,8 @@ const config = {
     timeout: 5000,
     toMatchSnapshot:{threshold:0.05}
   },
-  //reporter: [ ['html', { outputFolder: './playwright-report/'+ ReportDate}]],
-  //reporter: [ ['html', { outputFolder: './playwright-report/'}]],
+  ///reporter: [ ['html', { outputFolder: './playwright-report/'+ ReportDate}]],
+  ///reporter: [ ['html', { outputFolder: './playwright-report/'}]],
   reporter: [ ['experimental-allure-playwright']],
   projects: [
     {   
