@@ -49,10 +49,12 @@ It allows testing Chromium, Firefox and WebKit with a single API.
 
 ## FORTE Start
 
-	<h3> INSTALLATION</h3> 
+	INSTALLATION
+
 		The easiest way to get started with FORTE- Playwright Test is to run the init command.
 		# Run from your project's root directory
 		npm init playwright@latest
+
 		# Or create a new project
 		npm init playwright@latest new-project
 				
@@ -62,6 +64,7 @@ It allows testing Chromium, Firefox and WebKit with a single API.
 		Manually Adding Dependency 
 		Add dependency and install browsers.
 		npm i -D @playwright/test
+    
 		# install supported browsers
 		npx playwright install
 
