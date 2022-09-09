@@ -95,7 +95,25 @@ It allows testing Chromium, Firefox and WebKit with a single API.
 ## TESTDATA 
 
 * It will Pick the test values from the folder TestData 
-  for eg.,-> APITestData -> LoginPage -> LoginPage.json.Then the Array of Data will be reterived
+* By Mentioning the Module Type and Test Type in the Data Handler it will pick up either WEB or API execution 
+* Need to mention in every tests according to the module and test type 
+
+test('API Testing', async ({request}) => {
+
+  let DataHandlertest = new DataHandler("LoginPage", "API");
+  // function 
+  });
+  or 
+  
+test('Web Testing', async ({page}) => {
+
+  let DataHandlertest = new DataHandler("LoginPage", "WEB");
+  // function 
+  });
+
+  The data will be picked from this folder structure for  eg.,-> APITestData -> LoginPage -> LoginPage.json.
+  Then the Array of Data or string of data  will be retireved
+
 
 ## RUN 
 # Single Test 
