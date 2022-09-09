@@ -3,6 +3,8 @@ var logindata={};
 class DataHandler{ 
     constructor(moduletype,testType){
     let testdatahelper=new TestDataHelper();
+    console.log("mod -> " + moduletype);
+    console.log("testtype-> " + testType);
     const dataset=testdatahelper.jsonreader(moduletype,testType);
     if(Object.keys(dataset).length > 0)
     {    

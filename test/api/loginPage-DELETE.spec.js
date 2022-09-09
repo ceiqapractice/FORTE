@@ -4,9 +4,9 @@ const {expect,assert} = require('chai');
 const { CommonMethods } = require('../../main/api/CommonMethods');
 const { DataHandler } = require('../../Helpers/Datahandler');
 const datahandler = new DataHandler("testdata");
-const faker = require('@faker-js/faker');
 
-test('@DELETE METHOD -path Parameters - DELETE METHOD - Deleting User', async ({request}) => {
+
+test('DELETE METHOD -path Parameters - DELETE METHOD - Deleting User', async ({request}) => {
   const data = {
     
     "status":"active"
@@ -24,6 +24,13 @@ test('@DELETE METHOD -path Parameters - DELETE METHOD - Deleting User', async ({
   
 
 });  
+
+
+
+
+
+ 
+
 
 
 

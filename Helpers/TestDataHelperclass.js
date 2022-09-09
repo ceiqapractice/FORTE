@@ -14,8 +14,11 @@ loadobject(filepath){
         if(defaultrawdata === 'undefined')
         console.log("is undefined");
 
+        console.log("raw data --> ");
+        console.log(defaultrawdata)
+
         const defaultobject=JSON.parse(defaultrawdata);
-        console.log("default object --> " + defaultobject[0]);   
+        console.log("default object --> " + defaultobject);   
         return defaultobject; 
         }
         else
@@ -42,7 +45,7 @@ jsonreader(module,testType){
         }
         else if(testType.toLocaleLowerCase() == 'api')
         {
-             Testdatapath="./testData/apiTestData/"
+             Testdatapath="../testData/apiTestData/"
 
         }
         var filepath= Testdatapath + module +"/"+module+".json";

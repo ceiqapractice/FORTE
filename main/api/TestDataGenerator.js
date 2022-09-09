@@ -2,7 +2,7 @@ const { request } = require("playwright");
 const { faker } = require('@faker-js/faker');
 const fs=require("fs")
 
-const { DataHandler } = require('../TestData/Datahandler');
+const { DataHandler } = require('../../Helpers/dataHandler');
 
 class TestDataGenerator{
 
@@ -12,7 +12,7 @@ async generateUserData(noOfUsers, generateInvalidData){
     for (let i= 0; i <noOfUsers; i++) {
         let data = {
             "name": faker.lorem.sentence(),
-            "email": generateEmailData(generateInvalidData,false),
+            "email": await this.generateEmailData(generateInvalidData,false),
             "gender": faker.helpers.arrayElement(['Female', 'Male']),
             "status":faker.helpers.arrayElement(['active', 'inactive'])    
         }
@@ -36,9 +36,12 @@ async generateUserData(noOfUsers, generateInvalidData){
 }
 
 async generateEmailData(generateInvalidData,returnJson){
-    let DataHandlertest = new DataHandler("LoginPage", "API");
+    let DataHandlertest = new DataHandler("EmailTest", "API");
+    //let testDataHelper = new TestDataHelper();
+    //const emailData = await testDataHelper.loadobject("../TestData/APITestData/LoginPage/EmailTestData.json");
  
-    const email = (generateInvalidData) ? faker.helpers.arrayElement([DataHandlertest.getdata().InvalidEmailAddress]) : faker.internet.email()
+    const email = (generateInvalidData) ? faker.helpers.arrayElement(await DataHandlertest.getdata().InvalidEmailAddress) : faker.internet.email()
+    console.log("EMail Generation ->"+ email);
     if(returnJson)
     //console.log(returnJson)
         return {"email": email};
