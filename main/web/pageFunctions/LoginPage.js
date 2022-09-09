@@ -1,5 +1,5 @@
 const { DataHandler } = require("../../../Helpers/dataHandler");
-const { LocatorFinder } = require("../../../Helpers/locatorFinder");
+const { LocatorFinder } = require("../../../Helpers/LocatorFinder");
 const { webActions } = require("../commonFunctions/webActions");
 
 //Login page functionality test
