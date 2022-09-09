@@ -29,6 +29,23 @@
 <!-- ABOUT THE PROJECT -->
 
 ## About Forte
+PLAYWRIGHT - JAVASCRIPT 
+
+playwright is a Node.js library to automate Chromium, Firefox, and WebKit with a single API.
+Playwright is built to enable cross-browser web automation that is ever-green, capable, reliable and fast.
+It allows testing Chromium, Firefox and WebKit with a single API. 
+
+FORTE - FULLY OPTIMIZED RATIONAL TEST ENGINE
+
+ * FORTE is a framework for Web and API Automation Testing. 
+ * FORTE- Playwright has its own test runner for end-to-end tests, we call it Playwright Test. 
+ * By using JSON as Test Data Management by automaticlly picking up the data's by mentioning the class name from the Action Classes.
+ * Scraping the DOM to get the Locators FORTE Engine will find the Elements according to the given data &  it will stored in a JSON file for DATA PROCESSING 
+ * There is a Logicial Identifier for the Locators from the DOM, it will Picik-up the available 1ocators from the DOM 
+ * Common Functions are available for the entire functional flow Activity 
+ * As, FORTE supports for API Testing the CRUD Methods for the REST API's & Validating the BODY
+ * For Generating the Test Data for the CRUD Operations the Common Functions will be supported with FAKER ( RANDOM TEST DATA) 
+ 
 
 ## FORTE Start
 
