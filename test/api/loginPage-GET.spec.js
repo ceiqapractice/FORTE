@@ -1,11 +1,12 @@
 const { test } = require('@playwright/test');
-const { CRUDMethods } = require("../CommonFunction/CRUDMethods");
+const { CRUDMethods } = require('../../main/api/CRUDMethods');
 const {expect,assert} = require('chai');
-const { CommonMethods } = require('../CommonFunction/CommonMethods');
-const { DataHandler } = require('../TestData/Datahandler');
+const { CommonMethods } = require('../../main/api/CommonMethods');
+const { DataHandler } = require('../../Helpers/Datahandler');
 const datahandler = new DataHandler("testdata");
+const faker = require('@faker-js/faker');
 
-test('GET METHOD - Path Parameters -User Login with Token', async ({request}) => {
+test('@GET METHOD - Path Parameters -User Login with Token', async ({request}) => {
 
 
   const repo_userLogin = datahandler.getdata().accesstoken+datahandler.getdata().auth.TOKEN
