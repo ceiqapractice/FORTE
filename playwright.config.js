@@ -11,7 +11,7 @@ const config = {
   },
   //reporter: [ ['html', { outputFolder: './playwright-report/'+ ReportDate}]],
   //reporter: [ ['html', { outputFolder: './playwright-report/'}]],
-  reporter: [ ['experimental-allure-playwright']],
+  reporter: [['allure-playwright']],
   projects: [
     {   
       use: {
