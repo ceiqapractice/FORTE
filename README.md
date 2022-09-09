@@ -49,9 +49,74 @@ FORTE - FULLY OPTIMIZED RATIONAL TEST ENGINE
 
 ## FORTE Start
 
+	INSTALLATION 
+		The easiest way to get started with FORTE- Playwright Test is to run the init command.
+			# Run from your project's root directory
+			npm init playwright@latest
+			# Or create a new project
+			npm init playwright@latest new-project
+			
+			
+		This will create a configuration file, optionally add examples, a GitHub Action workflow and a first test example.spec.js. 
+		You can now jump directly to writing assertions section.
+		
+		Manually Adding Dependency 
+			Add dependency and install browsers.
+
+			npm i -D @playwright/test
+			# install supported browsers
+			npx playwright install
+	
 
 ## Execution
+FORTE - Application Programming Interface 
+**Configuration**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Prerequisites**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		
+		 * From the TestData Folder the API Modules will be decalred for eg., -> TestData->LoginPage->LoginPage.json
+			Inside the JSON file the "BASEURL","PATH PARAMETER","QUERY PARAMETER","TOKEN",etc .. will be configured 
+		 
+		 Config :
+	{
+    "baseURL": "https://gorest.co.in/public-api/users/",
+    "getUserListURL": "https://gorest.co.in/public/v2/users",
+    "accesstoken": "?access-token=",
+    "auth": {
+        "TOKEN": "c4f17a80e91c5a9368535ff65f17bad328fc3191b4892dae81a60340bec89e5c"
+    },
+    "pathuser": "3396",
+    "queryParameter": {
+        "parameterURL": "&page=4&gender=Female&status=Active"
+    },
+    "count": 5,
+    "updateuser": "2599"
+}
+## TESTDATA 
 
+* It will Pick the test values from the folder TestData 
+  for eg.,-> APITestData -> LoginPage -> LoginPage.json.Then the Array of Data will be reterived
+
+## RUN 
+# Single Test 
+		 * By using the below command from the folder level of execution we can run through command line 
+				-> npx playwright test filename with extension
+
+				for eg.,npx  playwright test .\loginPage-POST.spec.js 
+# Multiple Test : 
+		 * The tags will be mentioned according to the type of testing in the package.json file. 
+     The  same tags will declared in the test function 
+      
+      test('GET METHOD - Path Parameters -User Login with Token @smoke', async ({request}) => {
+        // function
+      }
+		 Inside the Package.json file -> 
+		 "scripts": {
+			"fulltest" : "npx playwright test",
+			"smoketest": "npx playwright  test --grep @smoke"
+			}	
+      In command line run with npx playwright test --grep @smoke
+			
 ## Reports
 
 After every test execution allure results folder will be generated in project root folder then run the below commands to generate the allure report

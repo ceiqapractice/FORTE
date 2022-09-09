@@ -7,7 +7,7 @@ const { DataHandler } = require('../../Helpers/Datahandler');
 
 
 
-test.only('GET METHOD - Path Parameters -User Login with Token', async ({request}) => {
+test('GET METHOD - Path Parameters -User Login with Token @smoke', async ({request}) => {
 
   let DataHandlertest = new DataHandler("LoginPage", "API");
   for (let i = 0; i < DataHandlertest.getdata().count; i++) {
