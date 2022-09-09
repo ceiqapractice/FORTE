@@ -28,70 +28,66 @@
 
 <!-- ABOUT THE PROJECT -->
 
-## About Forte
+## About FORTE
 PLAYWRIGHT - JAVASCRIPT 
 
-playwright is a Node.js library to automate Chromium, Firefox, and WebKit with a single API.
+Playwright is a Node.js library to automate Chromium, Firefox, and WebKit with a single API.
 Playwright is built to enable cross-browser web automation that is ever-green, capable, reliable and fast.
 It allows testing Chromium, Firefox and WebKit with a single API. 
 
-FORTE - FULLY OPTIMIZED RATIONAL TEST ENGINE
+<h4>FORTE - FULLY OPTIMIZED RATIONAL TEST ENGINE</h4>
 
- * FORTE is a framework for Web and API Automation Testing. 
- * FORTE- Playwright has its own test runner for end-to-end tests, we call it Playwright Test. 
- * By using JSON as Test Data Management by automaticlly picking up the data's by mentioning the class name from the Action Classes.
- * Scraping the DOM to get the Locators FORTE Engine will find the Elements according to the given data &  it will stored in a JSON file for DATA PROCESSING 
- * There is a Logicial Identifier for the Locators from the DOM, it will Picik-up the available 1ocators from the DOM 
+ * FORTE is designed for Web Application and REST API Automation Testing. 
+ * FORTE - Playwright has its own test runner for end-to-end tests, we call it Playwright Test. 
+ * By using JSON as Test Data Management for picking up the data's by mentioning the class name from the Test Class.
+ * Web Scraping - FORTE Engine will find the Web Elements according to the given URL's & it will stored in a JSON file for DATA PROCESSING 
+ * Logicial Identifier for the Locators matching inside the DOM, it will locate & works on the available 1ocators   
  * Common Functions are available for the entire functional flow Activity 
  * As, FORTE supports for API Testing the CRUD Methods for the REST API's & Validating the BODY
- * For Generating the Test Data for the CRUD Operations the Common Functions will be supported with FAKER ( RANDOM TEST DATA) 
+ * For Generating the Test Data for the CRUD Operations the Common Functions will be supported with FAKER ( RANDOM TEST DATA)
  
 
 ## FORTE Start
 
-	INSTALLATION 
+	<h3> INSTALLATION</h3> 
 		The easiest way to get started with FORTE- Playwright Test is to run the init command.
-			# Run from your project's root directory
-			npm init playwright@latest
-			# Or create a new project
-			npm init playwright@latest new-project
-			
-			
-		This will create a configuration file, optionally add examples, a GitHub Action workflow and a first test example.spec.js. 
+		# Run from your project's root directory
+		npm init playwright@latest
+		# Or create a new project
+		npm init playwright@latest new-project
+				
+		This will create a Configuration file, optionally add examples, a GitHub Action workflow and a first test example.spec.js. 
 		You can now jump directly to writing assertions section.
 		
 		Manually Adding Dependency 
-			Add dependency and install browsers.
-
-			npm i -D @playwright/test
-			# install supported browsers
-			npx playwright install
-	
+		Add dependency and install browsers.
+		npm i -D @playwright/test
+		# install supported browsers
+		npx playwright install
 
 ## Execution
-FORTE - Application Programming Interface 
-**Configuration**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Prerequisites**<br/>
+<h4>FORTE - Application Programming Interface </h4>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Configuration**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		
-		 * From the TestData Folder the API Modules will be decalred for eg., -> TestData->LoginPage->LoginPage.json
-			Inside the JSON file the "BASEURL","PATH PARAMETER","QUERY PARAMETER","TOKEN",etc .. will be configured 
+ * From the TestData Folder the API Modules will be decalred for eg., -> TestData->LoginPage->LoginPage.json
+	 Inside the JSON file the "BASEURL","PATH PARAMETER","QUERY PARAMETER","TOKEN",etc .. will be configured 
 		 
 		 Config :
-	{
-    "baseURL": "https://gorest.co.in/public-api/users/",
-    "getUserListURL": "https://gorest.co.in/public/v2/users",
-    "accesstoken": "?access-token=",
-    "auth": {
-        "TOKEN": "c4f17a80e91c5a9368535ff65f17bad328fc3191b4892dae81a60340bec89e5c"
-    },
-    "pathuser": "3396",
-    "queryParameter": {
-        "parameterURL": "&page=4&gender=Female&status=Active"
-    },
-    "count": 5,
-    "updateuser": "2599"
-}
+	      {
+          "baseURL": "https://gorest.co.in/public-api/users/",
+          "getUserListURL": "https://gorest.co.in/public/v2/users",
+          "accesstoken": "?access-token=",
+          "auth": {
+            "TOKEN": "c4f17a80e91c5a9368535ff65f17bad328fc3191b4892dae81a60340bec89e5c"
+            },
+          "pathuser": "3396",
+          "queryParameter": {
+          "parameterURL": "&page=4&gender=Female&status=Active"
+          },
+          "count": 5,
+          "updateuser": "2599"
+        }
 ## TESTDATA 
 
 * It will Pick the test values from the folder TestData 
