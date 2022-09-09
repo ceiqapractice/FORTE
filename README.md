@@ -64,12 +64,13 @@ It allows testing Chromium, Firefox and WebKit with a single API.
 		Manually Adding Dependency 
 		Add dependency and install browsers.
 		npm i -D @playwright/test
-    
+
 		# install supported browsers
 		npx playwright install
 
 ## Execution
-<h4>FORTE - Application Programming Interface </h4>
+## API 
+  <h4>FORTE - Application Programming Interface </h4>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Configuration**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		
