@@ -10,8 +10,8 @@ const config = {
     toMatchSnapshot:{threshold:0.05}
   },
   //reporter: [ ['html', { outputFolder: './playwright-report/'+ ReportDate}]],
-  //reporter: [ ['html', { outputFolder: './playwright-report/'}]],
-  reporter: [['allure-playwright']],
+  reporter: [ ['html', { outputFolder: './playwright-report/'}]],
+  //reporter: [['allure-playwright']],
   projects: [
     {   
       use: {
