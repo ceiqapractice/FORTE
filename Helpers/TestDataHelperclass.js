@@ -4,7 +4,7 @@ const path=require("path")
 
 let Testdatapath;
 
-class TestDataHelper{
+class testDataHelperClass{
 loadobject(filepath){
     try{
         if(fs.existsSync(path.join(process.cwd(),filepath))){
@@ -86,4 +86,4 @@ catch(err){
 }
 }
 }
-module.exports={TestDataHelper}
+module.exports={testDataHelperClass}
