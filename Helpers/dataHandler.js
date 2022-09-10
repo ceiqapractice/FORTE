@@ -1,8 +1,10 @@
-const { TestDataHelper } = require("./testDataHelperclass");
+const { testDataHelperClass } = require("./testDataHelperClass");
+
+
 var logindata={};
-class DataHandler{ 
+class dataHandler{ 
     constructor(moduletype,testType){
-    let testdatahelper=new TestDataHelper();
+    let testdatahelper=new testDataHelperClass();
     const dataset=testdatahelper.jsonreader(moduletype,testType);
     if(Object.keys(dataset).length > 0)
     {    
@@ -23,5 +25,5 @@ getdata(){
 }
 }
 
-module.exports={DataHandler}
+module.exports={dataHandler}
 

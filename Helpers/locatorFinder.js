@@ -1,15 +1,16 @@
-const { TestDataHelper } = require("./testDataHelperclass");
+//const { TestDataHelper } = require("./testDataHelperClass");
+const { testDataHelperClass } = require("./testDataHelperClass");
 const fs=require("fs")
 const path=require("path")
 //var webTestdatapath="./webPageObjects/"
 //let webpageLocatorsBasePath = webTestdatapath +  "webPageLocators/";
 let webpageLocatorsBasePath = "./locators/";
 
-class LocatorFinder{
+class locatorFinder{
 
     constructor(fileName,page){
         this.page = page;
-        let testDataHelper = new TestDataHelper();
+        let testDataHelper = new testDataHelperClass();
         let filePath = webpageLocatorsBasePath + fileName+ ".json";
         let elements = testDataHelper.loadobject(filePath);
         let returnObject = {};
@@ -43,4 +44,4 @@ class LocatorFinder{
         return availableLocator;
     }
 }
-module.exports={LocatorFinder}
+module.exports={locatorFinder}
