@@ -2,16 +2,16 @@ const { test } = require('@playwright/test');
 const { CRUDMethods } = require('../../main/api/CRUDMethods');
 const {expect,assert} = require('chai');
 const { CommonMethods } = require('../../main/api/CommonMethods');
-const { DataHandler } = require('../../Helpers/Datahandler');
+const { dataHandler } = require('../../Helpers/dataHandler');
 const {TestDataGenerator} = require('../../main/api/TestDataGenerator');
-const {TestDataHelper} = require("../../Helpers/TestDataHelperclass");
+const {TestDataHelper} = require("../../Helpers/testDataHelperclass");
 
 
 test('POST METHOD -path Parameters - Posting User name & email data', async ({
   request
 }) => {
 
-  let DataHandlertest = new DataHandler("LoginPage", "API");
+  let DataHandlertest = new dataHandler("LoginPage", "API");
 
   const noOfUsers = await DataHandlertest.getdata().count;
   const testDataGenerator = new TestDataGenerator();

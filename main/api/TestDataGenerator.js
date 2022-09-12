@@ -36,7 +36,7 @@ async generateUserData(noOfUsers, generateInvalidData){
 }
 
 async generateEmailData(generateInvalidData,returnJson){
-    let DataHandlertest = new DataHandler("EmailTest", "API");
+    let DataHandlertest = new dataHandler("EmailTest", "API");
     //let testDataHelper = new TestDataHelper();
     //const emailData = await testDataHelper.loadobject("../TestData/APITestData/LoginPage/EmailTestData.json");
  
