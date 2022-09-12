@@ -15,7 +15,7 @@
   "devDependencies": {
     "@playwright/test": "^1.25.2",
     "allure-commandline": "^2.18.1",
-    "experimental-allure-playwright": "^0.0.3"
+    "allure-playwright": "^2.0.0-beta.19"
   },
   "dependencies": {
     "@faker-js/faker": "^7.3.0",
@@ -24,8 +24,6 @@
     "dotenv": "^16.0.1",
     "faker": "^6.6.6",
     "fs": "^0.0.1-security",
-    "linkinator": "^4.0.2",
-    "playwright": "^1.24.2",
-    "playwright-dompath": "^0.0.7"
+    "playwright": "^1.24.2"
   }
 }
