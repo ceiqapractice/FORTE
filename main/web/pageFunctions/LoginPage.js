@@ -1,6 +1,8 @@
-const { DataHandler } = require("../../../Helpers/dataHandler");
-const { LocatorFinder } = require("../../../Helpers/locatorFinder");
+const { dataHandler } = require("../../../Helpers/dataHandler");
+const { locatorFinder } = require("../../../Helpers/locatorFinder");
 const { webActions } = require("../commonFunctions/webActions");
+
+
 
 //Login page functionality test
 class LoginPage{
@@ -11,8 +13,8 @@ class LoginPage{
     }  
     async LoginToApps()
     {
-        let DataHandlertest=new DataHandler("LoginPage","web");
-        let LocatorFinderObj= new LocatorFinder("Formv10byColorlibpage",this.page);
+        let DataHandlertest=new dataHandler("LoginPage","web");
+        let LocatorFinderObj= new locatorFinder("Formv10byColorlibpage",this.page);
         console.log("test");
         console.log(LocatorFinderObj.locators.Formv10byColorlib_first_name);
         console.log(DataHandlertest.getdata().Username);
