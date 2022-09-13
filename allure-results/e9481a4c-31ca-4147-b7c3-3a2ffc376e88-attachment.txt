@@ -1,0 +1,76 @@
+{
+  code: [33m200[39m,
+  meta: { pagination: { total: [33m3552[39m, pages: [33m356[39m, page: [33m1[39m, limit: [33m10[39m } },
+  data: [
+    {
+      id: [33m4591[39m,
+      name: [32m'Aliquam error omnis.'[39m,
+      email: [32m'email@example.web'[39m,
+      gender: [32m'female'[39m,
+      status: [32m'active'[39m
+    },
+    {
+      id: [33m3613[39m,
+      name: [32m'Dr. Vaishnavi Kocchar'[39m,
+      email: [32m'kocchar_dr_vaishnavi@hilll-murray.biz'[39m,
+      gender: [32m'male'[39m,
+      status: [32m'active'[39m
+    },
+    {
+      id: [33m3611[39m,
+      name: [32m'Balagovind Gill'[39m,
+      email: [32m'balagovind_gill@roob-kiehn.net'[39m,
+      gender: [32m'male'[39m,
+      status: [32m'inactive'[39m
+    },
+    {
+      id: [33m3610[39m,
+      name: [32m'Jagathi Rana'[39m,
+      email: [32m'rana_jagathi@gutmann-smitham.org'[39m,
+      gender: [32m'male'[39m,
+      status: [32m'active'[39m
+    },
+    {
+      id: [33m3609[39m,
+      name: [32m'Anjushri Talwar'[39m,
+      email: [32m'talwar_anjushri@ernser-streich.co'[39m,
+      gender: [32m'female'[39m,
+      status: [32m'inactive'[39m
+    },
+    {
+      id: [33m3608[39m,
+      name: [32m'Gajaadhar Kakkar'[39m,
+      email: [32m'gajaadhar_kakkar@tromp-kuhn.org'[39m,
+      gender: [32m'male'[39m,
+      status: [32m'inactive'[39m
+    },
+    {
+      id: [33m3607[39m,
+      name: [32m'Nikita Trivedi'[39m,
+      email: [32m'nikita_trivedi@lubowitz.com'[39m,
+      gender: [32m'female'[39m,
+      status: [32m'active'[39m
+    },
+    {
+      id: [33m3606[39m,
+      name: [32m'Kanchan Jain'[39m,
+      email: [32m'kanchan_jain@ratke.biz'[39m,
+      gender: [32m'female'[39m,
+      status: [32m'inactive'[39m
+    },
+    {
+      id: [33m3605[39m,
+      name: [32m'Fr. Subhash Ganaka'[39m,
+      email: [32m'fr_ganaka_subhash@bartell-lubowitz.info'[39m,
+      gender: [32m'male'[39m,
+      status: [32m'inactive'[39m
+    },
+    {
+      id: [33m3604[39m,
+      name: [32m'Rev. Dayaananda Talwar'[39m,
+      email: [32m'rev_dayaananda_talwar@lesch.info'[39m,
+      gender: [32m'female'[39m,
+      status: [32m'inactive'[39m
+    }
+  ]
+}
