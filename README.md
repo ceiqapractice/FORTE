@@ -69,7 +69,93 @@ It allows testing Chromium, Firefox and WebKit with a single API.
 		npx playwright install
 
 ## Execution
-## API 
+
+ **WEB** 
+
+
+**Element Finder**</br>
+
+Element Finder feature allows you to find the elements of the page with the identifiers ID and Name and generate a JSON file with the page locators.</br>
+
+Below configurations need to be done for visual regression testing in <code>baseConfig.js</code>
+
+![image](https://user-images.githubusercontent.com/113173052/189345471-bec182d3-fef4-4c47-a2c1-54d9b31966be.png)
+
+The JSON file with the name of the page title will be generated under the Locators folder for the element finder with locators’ identifiers.
+
+![image](https://user-images.githubusercontent.com/113173052/189345512-15f79644-ac29-43b7-aea9-1092ee5c18bf.png)
+
+The JSON file data will be stored in the below format.
+
+![image](https://user-images.githubusercontent.com/113173052/189344843-aa9f2cca-6361-4406-8a52-482998600c05.png)
+
+Element Finder can be executed using the command :
+
+<code> npx playwright test test/web/elementFinder.spec.js </code>
+
+**Test Data Management**</br>
+
+Test data management helps you to organize the test data based on your needs in the environment and language specific and retrieve data 
+easily as required for the test case execution.
+
+The Test data can contain three different files (Common data, Environment specific data & Language Specific data) 
+and it should be saved under the folder Testdata in the JSON format.
+
+The format of the files should be mentioned as : <strong>TestData>Modulename></strong>
+
+<pre>
+<code>
+modulename.json (Common data)
+modulename.envname.json(Environment Specific data) e.g. LoginPage.QA.json /LoginPage.dev.json
+modulename.Languagecode.json(Language Specific data) e.g. LoginPage.en.json/LoginPage.fr.json
+</code>
+</pre>
+
+And the Env and Language configuration can be done in <code>Config.js file</code>
+
+![image](https://user-images.githubusercontent.com/113173052/189368626-98f8c6e8-62f0-490c-bc08-df4bbb1fd1a8.png)
+
+
+Test data Management can be used by importing the data handler file under <strong>FORTE>Helper>datahandler.js</strong> 
+
+Importing the file and object can be created with the two parameters module type (The name of the file you have stored under test data) 
+& Test type (WEB/API) to access the data from the test data location
+
+<pre><code>
+e.g.,
+Const Object=new dataHandler (moduletype, Testtype)
+Object.getdata().Key//It will return the specified value for the JSON key 
+</code></pre>
+
+ **Visual Comparison**<br/>
+ 
+Visual comparison is an feature that navigates through every pages of the application and takes screenshot for visual regression of the application.
+
+Below configurations need to be done for visual regression testing in 
+<code> baseConfig.js</code>
+
+![image](https://user-images.githubusercontent.com/113173052/189321445-21396034-e808-4c5e-a935-88ad1d2556e0.png)
+
+Program navigates to each page of the application and checks whether the screenshot for the page is present in the folder that is specified in the 
+foldertobestested configuration. If the screenshot is present, then it will be compared with the actual page or else screenshot of the page will be
+taken and placed in the folder mentioned in the configuration.
+
+Threshold and Pixel difference ratio can be configured in the <code>playwright.config.js</code>
+
+![image](https://user-images.githubusercontent.com/113173052/189321800-5ae57720-b632-49e4-97dd-9435fe07f954.png)
+
+The name of the screenshot will be saved in the format of the “url-win32.png” followed by the trimmed base URL. E.g., The screenshot name 
+of the URL (https://www.ceiamerica.com/about-us/) is aboutus-win32.png.
+
+Folder to be tested should be placed under the structure FORTE > Visualcomparisonscreenshots> Foldername
+
+![image](https://user-images.githubusercontent.com/113173052/189322893-8760e562-dfa0-4c3a-a5cc-465d84c131f2.png)
+
+Visual Regression can be executed using the command :
+
+<code> npx playwright test test/web/Visualcomparison.spec.mjs </code>
+
+**API** 
   <h4>FORTE - Application Programming Interface </h4>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Configuration<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
