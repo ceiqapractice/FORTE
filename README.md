@@ -35,7 +35,7 @@ Playwright is a Node.js library to automate Chromium, Firefox, and WebKit with a
 Playwright is built to enable cross-browser web automation that is ever-green, capable, reliable and fast.
 It allows testing Chromium, Firefox and WebKit with a single API. 
 
-<h4>FORTE - FULLY OPTIMIZED RATIONAL TEST ENGINE</h4>
+<h4>FORTE - FULLY OPTIMIZED RADICAL TEST ENGINE</h4>
 
  * FORTE is designed for Web Application and REST API Automation Testing. 
  * FORTE - Playwright has its own test runner for end-to-end tests, we call it Playwright Test. 
