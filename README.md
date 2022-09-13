@@ -71,7 +71,7 @@ It allows testing Chromium, Firefox and WebKit with a single API.
 ## Execution
 ## API 
   <h4>FORTE - Application Programming Interface </h4>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Configuration**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Configuration<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		
  * From the TestData Folder the API Modules will be decalred for eg., -> TestData->LoginPage->LoginPage.json
@@ -103,6 +103,7 @@ test('API Testing', async ({request}) => {
   let DataHandlertest = new DataHandler("LoginPage", "API");
   // function 
   });
+
   or 
   
 test('Web Testing', async ({page}) => {
@@ -129,11 +130,13 @@ test('Web Testing', async ({page}) => {
         // function
       }
 		 Inside the Package.json file -> 
+
 		 "scripts": {
 			"fulltest" : "npx playwright test",
 			"smoketest": "npx playwright  test --grep @smoke"
 			}	
-      In command line run with npx playwright test --grep @smoke
+     *  In command line run with npx playwright test --grep @smoke  for tag based execution 
+     * In Command line run with npx playwright test  for full test execution  
 
 ## Reports
 

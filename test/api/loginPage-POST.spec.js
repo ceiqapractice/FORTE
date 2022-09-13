@@ -7,7 +7,7 @@ const {TestDataGenerator} = require('../../main/api/TestDataGenerator');
 const {testDataHelperClass} = require("../../Helpers/testDataHelperClass");
 
 
-test('POST METHOD -path Parameters - Posting User name & email data', async ({
+test('POST METHOD -path Parameters - Posting User name & email data @smoke', async ({
   request
 }) => {
 
