@@ -3,10 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "fulltest": "npx playwright test",
-    "smoketest": "npx playwright test --grep @smoke"
-  },
+  "scripts": {},
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -24,7 +21,7 @@
     "fs": "^0.0.1-security",
     "linkinator": "^4.0.2",
     "npm": "^8.19.1",
-    "playwright": "^1.25.2",
+    "playwright": "^1.24.2",
     "playwright-dompath": "^0.0.7"
   }
 }
