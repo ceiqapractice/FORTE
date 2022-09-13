@@ -71,7 +71,19 @@ It allows testing Chromium, Firefox and WebKit with a single API.
 ## Execution
 
  **WEB** 
+ 
+ **URL Config**</br>
+ 
+ The URL of the application under test can be given in the <code>baseConfig.js</code> file and used through the test.
+ 
+ ![image](https://user-images.githubusercontent.com/113173052/189847129-f3170f24-60af-4ee8-8618-9ecb49aa55ca.png)
 
+**Web Actions**</br>
+
+All the common web related playwright’s actions are pre-available in the path 
+<strong> main > web >commonFunctions > webActions.js </strong>and these common actions can be used throughout the test.
+
+Any update on the actions or addition of the new methods can be added over here so it can be re-used for the test.
 
 **Element Finder**</br>
 
@@ -87,11 +99,14 @@ The JSON file with the name of the page title will be generated under the Locato
 
 The JSON file data will be stored in the below format.
 
-![image](https://user-images.githubusercontent.com/113173052/189344843-aa9f2cca-6361-4406-8a52-482998600c05.png)
+<pre><code>Pagetitle_elementid:"#element id value" //if the element contains only ID
+Pagetitle_elementName:".element name value" //if the element contains only name
+Pagetitle_elementName:["#element id value",".element name value"] //if the element contains both ID and Name</code>
+</pre>
 
 Element Finder can be executed using the command :
 
-<code> npx playwright test test/web/elementFinder.spec.js </code>
+<pre><code> npx playwright test test/web/elementFinder.spec.js </code></pre>
 
 **Test Data Management**</br>
 
@@ -103,13 +118,10 @@ and it should be saved under the folder Testdata in the JSON format.
 
 The format of the files should be mentioned as : <strong>TestData>Modulename></strong>
 
-<pre>
-<code>
-modulename.json (Common data)
+<pre><code>modulename.json (Common data)
 modulename.envname.json(Environment Specific data) e.g. LoginPage.QA.json /LoginPage.dev.json
 modulename.Languagecode.json(Language Specific data) e.g. LoginPage.en.json/LoginPage.fr.json
-</code>
-</pre>
+</code></pre>
 
 And the Env and Language configuration can be done in <code>Config.js file</code>
 
@@ -121,11 +133,34 @@ Test data Management can be used by importing the data handler file under <stron
 Importing the file and object can be created with the two parameters module type (The name of the file you have stored under test data) 
 & Test type (WEB/API) to access the data from the test data location
 
-<pre><code>
-e.g.,
+<pre><code>e.g.,
 Const Object=new dataHandler (moduletype, Testtype)
 Object.getdata().Key//It will return the specified value for the JSON key 
 </code></pre>
+
+**RUN**</br>
+
+To run the Web test cases the first configuration need to be done in <code>Playwright.config.js</code> file
+
+<pre><code>testDir : “test/web” // The testDir should be set to WEB to run the Web test cases </code></pre>
+
+You can run single test, multiple tests or all test suing the command line and the commands shown below 
+
+Running single test file
+<pre><code> npx playwright test test/web/login-page.spec.js </code></pre>
+
+Running a set of test files
+<pre><code> npx playwright test test/web/login-page.spec.js test/web/home-page.spec.js</code></pre>
+
+Running a file that have <strong>home</strong> or <strong>login</strong> in the filename
+<pre><code> npx playwright test test/web/login-page.spec.js test/web/home-page.spec.js</code></pre>
+
+Running Tests on Specific browsers
+<pre><code> npx playwright test test/web/login-page.spec.js --project=chromium</code></pre>
+
+Running all Tests
+<pre><code> npx playwright test </code></pre>
+
 
  **Visual Comparison**<br/>
  
@@ -153,7 +188,7 @@ Folder to be tested should be placed under the structure FORTE > Visualcompariso
 
 Visual Regression can be executed using the command :
 
-<code> npx playwright test test/web/Visualcomparison.spec.mjs </code>
+<pre><code> npx playwright test test/web/Visualcomparison.spec.mjs </code></pre>
 
 **API** 
   <h4>FORTE - Application Programming Interface </h4>
