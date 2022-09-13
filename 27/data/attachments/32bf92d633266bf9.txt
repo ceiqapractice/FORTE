@@ -1,1 +1,0 @@
-URL -> https://gorest.co.in/public-api/users/?access-token=c4f17a80e91c5a9368535ff65f17bad328fc3191b4892dae81a60340bec89e5c
