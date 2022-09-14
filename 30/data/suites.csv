@@ -1,0 +1,3 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Wed Sep 14 14:21:14 GMT 2022","Wed Sep 14 14:21:15 GMT 2022","1418","","example2.spec.js","","","","@Smoke",""
+"passed","Wed Sep 14 14:21:10 GMT 2022","Wed Sep 14 14:21:14 GMT 2022","3211","","example1.spec.js","","","","@Smoke",""
