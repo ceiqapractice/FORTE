@@ -5,6 +5,7 @@ const { LoginPage } = require("../../main/web/pageFunctions/LoginPage");
 
 
 
+test.describe.configure({ mode: 'parallel' });
 test("@Regression", async ({page})=>
   {
     const webActionObj =new webActions(page);

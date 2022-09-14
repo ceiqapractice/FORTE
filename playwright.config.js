@@ -2,9 +2,11 @@ const { devices } = require('@playwright/test');
 var date = new Date();
 var ReportDate =date.getFullYear() + ("0" + (date.getMonth() + 1)).slice(-2) + ("0" + date.getDate()).slice(-2) + ("0" + date.getHours() ).slice(-2) + ("0" + date.getMinutes()).slice(-2) + ("0" + date.getSeconds()).slice(-2);
 const config = {
-  testDir: './test/api',
+  testDir: './test/web',
   testMatch: '**spec.js',
   timeout: 8000 * 1000,
+  Workers : 2,
+  fullyParallel: true,
   expect: {
     timeout: 5000,
     toMatchSnapshot:{threshold:0.05}
@@ -19,6 +21,12 @@ const config = {
         headless:true,
         video: 'off'
       },
+      use: {
+        browserName:"chromium",
+        headless:false,
+        video: 'off'
+      },
+  
   
     },
   ],
