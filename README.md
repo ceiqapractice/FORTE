@@ -35,7 +35,7 @@ Playwright is a Node.js library to automate Chromium, Firefox, and WebKit with a
 Playwright is built to enable cross-browser web automation that is ever-green, capable, reliable and fast.
 It allows testing Chromium, Firefox and WebKit with a single API. 
 
-<h4>FORTE - FULLY OPTIMIZED RATIONAL TEST ENGINE</h4>
+<h4>FORTE - FULLY OPTIMIZED RADICAL TEST ENGINE</h4>
 
  * FORTE is designed for Web Application and REST API Automation Testing. 
  * FORTE - Playwright has its own test runner for end-to-end tests, we call it Playwright Test. 
@@ -49,24 +49,27 @@ It allows testing Chromium, Firefox and WebKit with a single API.
 
 ## FORTE Start
 
-	INSTALLATION
+The following software are required:
 
-		The easiest way to get started with FORTE- Playwright Test is to run the init command.
-		# Run from your project's root directory
-		npm init playwright@latest
+- nodejs : Download and Install Node JS from
+  ```sh
+  https://nodejs.org/en/download/
+  ```
+- Install Java 8 or above, Allure Reports require Java 8 or higher.
 
-		# Or create a new project
-		npm init playwright@latest new-project
-				
-		This will create a Configuration file, optionally add examples, a GitHub Action workflow and a first test example.spec.js. 
-		You can now jump directly to writing assertions section.
-		
-		Manually Adding Dependency 
-		Add dependency and install browsers.
-		npm i -D @playwright/test
+Installation
 
-		# install supported browsers
-		npx playwright install
+1. Clone the repo using below URL
+
+```sh
+https://github.com/ceiqapractice/FORTE.git
+```
+
+2. Navigate to folder and install npm packages using:
+
+```sh
+npm install
+```
 
 ## Execution
 
