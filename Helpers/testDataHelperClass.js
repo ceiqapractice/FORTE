@@ -15,7 +15,7 @@ loadobject(filepath){
         console.log("is undefined");
 
         const defaultobject=JSON.parse(defaultrawdata);
-        console.log("default object --> " + defaultobject[0]);   
+        console.log("default object --> " + defaultobject);   
         return defaultobject; 
         }
         else
