@@ -5,7 +5,6 @@ const config = {
   testDir: './test/web',
   testMatch: '**spec.js',
   timeout: 8000 * 1000,
-  Workers : 2,
   fullyParallel: true,
   expect: {
     timeout: 5000,
@@ -14,21 +13,35 @@ const config = {
   //reporter: [ ['html', { outputFolder: './playwright-report/'+ ReportDate}]],
   reporter: [ ['html', { outputFolder: './playwright-report/'}]],
  // reporter: [['allure-playwright']],
+ 
   projects: [
+    
     {   
-      use: {
-        browserName:"firefox",
-        headless:true,
-        video: 'off'
-      },
+      name : 'chrome',
       use: {
         browserName:"chromium",
         headless:false,
         video: 'off'
+      }
       },
-  
-  
-    },
+      {
+      
+        name : 'webkit',
+        use: {
+          browserName:"webkit",
+          headless:false,
+          video: 'off'
+        }
+        },
+        {
+          name : 'firefox',
+          use: {
+            browserName:"firefox",
+            headless:false,
+            video: 'off'
+          }
+          },
+      
   ],
 };
 
