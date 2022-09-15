@@ -56,15 +56,3 @@ test('GET METHOD -path Parameters - Get User by using ID', async ({request}) => 
   expect(await response).to.be.ok
   }
 });  
-
-
-
-
-
- 
-
-
-
-
-
-

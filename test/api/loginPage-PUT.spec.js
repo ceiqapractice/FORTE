@@ -49,19 +49,3 @@ test('PUT METHOD -path Parameters - Updating User name & email data - Single Use
   
   
 });  
-
-
-
-
-
- 
-
-
-
- 
-
-
-
-
-
-

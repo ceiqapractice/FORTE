@@ -25,22 +25,3 @@ test('DELETE METHOD -path Parameters - Deleting User', async ({request}) => {
   
 
 });  
-
-
-
-
-
- 
-
-
-
-
-
-
- 
-
-
-
-
-
-
