@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "fulltest": "npx playwright test",
-    "smoketest": "npx playwright test --grep @smoke"
+    "smoketest": "npx playwright test --grep @Smoke --workers 5 --project=firefox",
+    "Regression": "npx playwright test --grep @Regression"
   },
+  
   "keywords": [],
   "author": "",
   "license": "ISC",

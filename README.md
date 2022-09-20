@@ -147,7 +147,7 @@ To run the Web test cases the first configuration need to be done in <code>Playw
 
 <pre><code>testDir : “test/web” // The testDir should be set to WEB to run the Web test cases </code></pre>
 
-You can run single test, multiple tests or all test suing the command line and the commands shown below 
+You can run single test, multiple tests or all test using the command line and the commands shown below 
 
 Running single test file
 <pre><code> npx playwright test test/web/login-page.spec.js </code></pre>
@@ -164,6 +164,29 @@ Running Tests on Specific browsers
 Running all Tests
 <pre><code> npx playwright test </code></pre>
 
+**PARALLEL EXECUTION**</br>
+Parallel Execution works along with workers based on the tags of execution from the package.json file 
+
+![image](https://user-images.githubusercontent.com/109504306/190432356-e54d07bd-25f2-4ce2-b600-775e76915079.png)
+
+All tests run in worker processes. These processes are OS processes, running independently, orchestrated by the test runner. All workers have identical environments and each starts its own browser.
+Note that parallel tests are executed in separate worker processes and cannot share any state or global variables. Each test executes all relevant hooks just for itself
+
+for eg., from the above image, tag of smoketest will be executed in parallel with 5 workers along with the mentioned tags in the tests in firefox env
+In the below image of the Regression execution there is no environment mentioned so it will be executed based on the browsers mentioned in the PROJECTS -> playwright.config.js
+![image](https://user-images.githubusercontent.com/109504306/190434055-fd80da93-782f-47dd-9417-930c24052172.png)
+
+
+**locator Finder**</br>
+Locator Finder, Which is used to filter the available elements from the list of elements in a DOM 
+
+The list of available elements will be mentioned in the JSON File
+![image](https://user-images.githubusercontent.com/109504306/190428910-40a209e3-d230-4df9-a796-42b5766b35b8.png)
+
+It will accept in the form of Array as well as String of element. It will search according to the logicial finder of elements in the DOM 
+When the element is available and visible it will pick from the DOM and perform the actions 
+
+NOTE : It will accept String of DATA and Array of an elements 
 
  **Visual Comparison**<br/>
  
@@ -239,14 +262,27 @@ test('Web Testing', async ({page}) => {
   The data will be picked from this folder structure for  eg.,-> APITestData -> LoginPage -> LoginPage.json.
   Then the Array of Data or string of data  will be retireved
 
+## RUN
+To run the API test cases the configuration need to be upadte in the  <code>Playwright.config.js</code> file
 
-## RUN 
-# Single Test 
-		 * By using the below command from the folder level of execution we can run through command line 
-				-> npx playwright test filename with extension
+<pre><code>testDir : “test/api” // The testDir should be set to API to run the Web test cases </code></pre>
 
-				for eg.,npx  playwright test .\loginPage-POST.spec.js 
-# Multiple Test : 
+You can run single test, multiple tests or all test using the command line and the commands shown below 
+
+## SINGLE TEST &  MULTIPLE TEST
+Running single test file
+<pre><code> npx playwright test .\loginPage-POST.spec.js  </code></pre>
+
+Running a set of test files
+<pre><code> npx playwright test test/api/loginPage-GET.spec.js test/api/loginPage-POST.spec.js</code></pre>
+
+Running a file that have <strong>home</strong> or <strong>login</strong> in the filename
+<pre><code> npx playwright test test/api/loginPage-POST.spec.js test/api/loginPage-POST.spec.js</code></pre>
+
+Running all Tests
+<pre><code> npx playwright test </code></pre>
+
+# GROUPING Test : 
 		 * The tags will be mentioned according to the type of testing in the package.json file. 
      The  same tags will declared in the test function 
       

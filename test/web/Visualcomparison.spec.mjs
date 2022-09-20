@@ -16,7 +16,7 @@ async function comparepage(filepath,page){
       console.log(err);
     }}
 
-test('@Visual_comparison',async ({ page }) => {  
+test.skip('@Visual_comparison',async ({ page }) => {  
     const link = await import("linkinator");
     const results = await link.check({
       path: baseURL,
