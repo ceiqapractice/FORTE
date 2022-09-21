@@ -21,6 +21,7 @@
 			   </ul>
             <li><a href="#reports">Reports</a></li>
             <li><a href="#docker">Docker</a></li>
+	    <li><a href="#lighthouse">LightHouse</a></li>
           </ol>
         </h5>    
     </details>
@@ -371,3 +372,13 @@ Now docker container is ready, Run the test scripts using below commands,
        &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; 5. Publish Allure results to Github pages<br/>
 
  ![Flow](https://user-images.githubusercontent.com/110914539/188542865-f601154e-652d-4ced-9a8b-b790216658bb.JPG)
+ 
+ ## LightHouse
+ 
+ Lighthouse is an open-source, automated tool for improving the quality of web pages. You can run it against any web page, public or requiring authentication. It has audits for performance, accessibility, progressive web apps, SEO and more.
+I have configure Lighthouse for Performance in my Project.
+- To configure Lighthouse navigate to "Lighthouse.js" and replace base URL with desired URL to test.
+- Use lsaudit() function to audit the webpages(example navigate to Lighthouse.js --> Line no.25)
+- To run Lighhouse test use below command, reports will be generated in htnl format in root directory with name "LighthouseReport.html" 
+```JS
+npm run lighthouse
