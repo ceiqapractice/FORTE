@@ -90,26 +90,28 @@ Any update on the actions or addition of the new methods can be added over here 
 
 **Element Finder**</br>
 
-Element Finder feature allows you to find the elements of the page with the identifiers ID and Name and generate a JSON file with the page locators.</br>
+Element Finder feature allows you to find the elements of the page with the identifiers ID, className and generic based values of the element and then it will generate a JSON file with the page locators.</br>
 
 Below configurations need to be done for visual regression testing in <code>baseConfig.js</code>
+Mention the reqruied URL for the elementFinder 
 
-![image](https://user-images.githubusercontent.com/113173052/189345471-bec182d3-fef4-4c47-a2c1-54d9b31966be.png)
+![image](https://user-images.githubusercontent.com/109504306/193071328-a52646d6-c8fc-4033-a516-aa3f54b9b3aa.png)
 
-The JSON file with the name of the page title will be generated under the Locators folder for the element finder with locators’ identifiers.
+The JSON file with the name of the page title with TimeStamp will be generated under the Locators folder for the element finder with locators identifiers.
 
 ![image](https://user-images.githubusercontent.com/113173052/189345512-15f79644-ac29-43b7-aea9-1092ee5c18bf.png)
 
 The JSON file data will be stored in the below format.
 
 <pre><code>Pagetitle_elementid:"#element id value" //if the element contains only ID
-Pagetitle_elementName:".element name value" //if the element contains only name
-Pagetitle_elementName:["#element id value",".element name value"] //if the element contains both ID and Name</code>
+Pagetitle_elementName:".element className value" //if the element contains only className
+Pagetitle_elementName:".element name value" //if the element contains only name with the basic xpath finder
+Pagetitle_elementName:["#element id value",".element className value"] //if the element contains both ID and className</code>
 </pre>
 
 Element Finder can be executed using the command :
 
-<pre><code> npx playwright test test/web/elementFinder.spec.js </code></pre>
+<pre><code> npx playwright test .\elementFinder.js </code></pre>
 
 **Test Data Management**</br>
 
