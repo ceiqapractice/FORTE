@@ -10,6 +10,7 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 16.*
+        if: always()
       - run: docker build . --file Dockerfile.focal -t plimage
       - run: docker run -d --name plcontainer plimage
       - run: sudo docker cp plcontainer:./tests/allure-results allure-results
