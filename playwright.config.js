@@ -5,7 +5,7 @@ const config = {
   testDir: './test/web',
   testMatch: '**spec.js',
   timeout: 8000 * 1000,
-  fullyParallel: true,
+  fullyParallel: false,
   expect: {
     timeout: 5000,
     toMatchSnapshot:{threshold:0.05}
