@@ -378,7 +378,7 @@ Now docker container is ready, Run the test scripts using below commands,
  Lighthouse is an open-source, automated tool for improving the quality of web pages. You can run it against any web page, public or requiring authentication. It has audits for performance, accessibility, progressive web apps, SEO and more.
 I have configure Lighthouse for Performance in my Project.
 - To configure Lighthouse navigate to "Lighthouse.js" and replace base URL with desired URL to test.
-- Use lsaudit() function to audit the webpages(example navigate to Lighthouse.js --> Line no.25)
+- Call lsaudit() function before page navigation to audit the webpage.
 - To run Lighhouse test use below command, reports will be generated in htnl format in root directory with name "LighthouseReport.html" 
 ```JS
 npm run lighthouse
