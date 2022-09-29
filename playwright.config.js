@@ -11,8 +11,8 @@ const config = {
     toMatchSnapshot:{threshold:0.05}
   },
   //reporter: [ ['html', { outputFolder: './playwright-report/'+ ReportDate}]],
-  reporter: [ ['html', { outputFolder: './playwright-report/'}]],
- // reporter: [['allure-playwright']],
+ // reporter: [ ['html', { outputFolder: './playwright-report/'}]],
+  reporter: [['allure-playwright']],
  
   projects: [
     
@@ -20,7 +20,7 @@ const config = {
       name : 'chrome',
       use: {
         browserName:"chromium",
-        headless:false,
+        headless:true,
         video: 'off'
       }
       },
@@ -29,7 +29,7 @@ const config = {
         name : 'webkit',
         use: {
           browserName:"webkit",
-          headless:false,
+          headless:true,
           video: 'off'
         }
         },
@@ -37,7 +37,7 @@ const config = {
           name : 'firefox',
           use: {
             browserName:"firefox",
-            headless:false,
+            headless:true,
             video: 'off'
           }
           },
