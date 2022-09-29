@@ -5,7 +5,7 @@ const config = {
   testDir: './test/web',
   testMatch: '**spec.js',
   timeout: 8000 * 1000,
-  fullyParallel: false,
+  fullyParallel: true,
   expect: {
     timeout: 5000,
     toMatchSnapshot:{threshold:0.05}
@@ -24,15 +24,6 @@ const config = {
         video: 'off'
       }
       },
-      {
-      
-        name : 'webkit',
-        use: {
-          browserName:"webkit",
-          headless:true,
-          video: 'off'
-        }
-        },
         {
           name : 'firefox',
           use: {
