@@ -12,8 +12,8 @@ const config = {
   },
   //reporter: [ ['html', { outputFolder: './playwright-report/'+ ReportDate}]],
  //reporter: [ ['html', { outputFolder: './playwright-report/'}]],
-  reporter: [['allure-playwright']],
- 
+  reporter: [['allure-playwright'],['./My-Reporter.js']],
+  globalTeardown:require.resolve("./mailer.js"), 
   projects: [
     
     {   
