@@ -5,15 +5,15 @@ const config = {
   testDir: './test/web',
   testMatch: '**spec.js',
   timeout: 8000 * 1000,
-  fullyParallel: true,
+  fullyParallel: false,
   expect: {
     timeout: 5000,
     toMatchSnapshot:{threshold:0.05}
   },
   //reporter: [ ['html', { outputFolder: './playwright-report/'+ ReportDate}]],
  //reporter: [ ['html', { outputFolder: './playwright-report/'}]],
- reporter: [['allure-playwright']],
- 
+  reporter: [['allure-playwright'],['./My-Reporter.js']],
+  globalTeardown:require.resolve("./mailer.js"), 
   projects: [
     
     {   
