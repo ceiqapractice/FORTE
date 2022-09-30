@@ -318,6 +318,30 @@ Run the below command to open the allure report in the browser
  - Failed Report
  ![Failed Report](https://user-images.githubusercontent.com/110914539/188542809-b95d7289-b44e-4321-9485-3ee82683c5d9.JPG)
 
+**Notification**<br/>
+A detailed status of Test execution report with test report link and the data table will be sent to the configured mails and Teams group. To achieve that add the <strong>[“./My-Reporter.js”]</strong> to your reporter config in <code>Playwright.config.js.</code>
+
+All the necessary config for Notification can be done in the <code>baseConfig.js file</code>.
+
+<pre><code>//baseConfig.js
+//Mail Configurations
+"FromMailaddress":"abc@xyz.com",// From Mail Address should be mentioned here
+"FromAddressPassword":"value",//From address password should be mentioned here
+"ToMailAddress":["firstmail","Secondmail],//To Mail addresses should be mentioned here
+"TeamsWebhookURL":"https://computerenterprisesinc.webhook.office.com/webhookb2/....",//Teams Channel WebHook URL should be mentioned here
+"MailServiceProvider":"Gmail",//Mail service provider should be mentioned here
+"MailNotification":"yes",//Yes for Mail notification enable and No for notification disable
+"TeamsNotification":"yes",//Yes for Teams notification enable and No for notification disable
+"Githubreportlink":"https://ceiqapractice.github.io/.." //Github report link can be added here
+</code></pre>
+
+Snapshot for notifications:
+![image](https://user-images.githubusercontent.com/110914539/193258851-7903d4cb-feb0-4c36-a50d-8c78c3045916.png)
+
+![image](https://user-images.githubusercontent.com/110914539/193258864-405c2773-0e95-4886-8d6b-4574df094d1a.png)
+
+
+
 
 ## Docker
 **Local Execution**<br/>
@@ -353,7 +377,6 @@ Run the below command to open the allure report in the browser
 Now docker container is ready, Run the test scripts using below commands,
 
     npx playwright test
-
 
 **CI/CD Execution**<br/>
 
