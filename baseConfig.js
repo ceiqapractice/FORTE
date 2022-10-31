@@ -3,14 +3,15 @@ var vccd =date.getFullYear() + ("0" + (date.getMonth() + 1)).slice(-2) + ("0" + 
 const testConfig=
     {
         "Project":"Demo Project",
-        "dev": "https://colorlib.com/etc/regform/colorlib-regform-36/",
+        //"dev": "https://colorlib.com/etc/regform/colorlib-regform-36/",
+        "dev": "https://businesscentral.dynamics.com/5efe0d44-cf27-4653-9fab-7da5c5e002a7/sandbox",
         "username": "dganesh@ceiamerica.com ",
         "password": "Ganesh@12345",
         "baseURL":"https://www.ceiamerica.com/",
         "visualComparisonDate":"20220902135418",
         "linksToSkip":["https://www.facebook.com","https://twitter.com","https://www.linkedin.com","https://www.ceiamerica.com/wp","https://share.hsforms.com/","https://js.hs-scripts.com/","https://fonts.googleapis.com/","https://www.googletagmanager.com/"],
         "Env":"dev",
-        "Language":"fr",
+        "Language":"",
         "elementFinderURL":"https://colorlib.com/etc/regform/colorlib-regform-36/",
         //Mail COnfigurations
         "FromMailaddress":"gowthams6453@gmail.com",
