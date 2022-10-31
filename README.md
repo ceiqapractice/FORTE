@@ -240,7 +240,7 @@ Visual Regression can be executed using the command :
           "count": 5,
           "updateuser": "2599"
         }
-## TESTDATA 
+## TEST DATA 
 
 * It will Pick the test values from the folder TestData 
 * By Mentioning the Module Type and Test Type in the Data Handler it will pick up either WEB or API execution 
