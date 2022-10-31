@@ -20,7 +20,7 @@ const config = {
       name : 'chromium',
       use: {
         browserName:"chromium",
-        headless:false,
+        headless:true,
         video: 'off'
       }
       },
