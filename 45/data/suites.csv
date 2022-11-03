@@ -1,3 +1,3 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Thu Nov 03 10:35:31 GMT 2022","Thu Nov 03 10:35:55 GMT 2022","24018","chromium","bussinessCentral.spec.js","","","","Test 1 -> @Create",""
-"passed","Thu Nov 03 10:35:55 GMT 2022","Thu Nov 03 10:35:55 GMT 2022","2","chromium","bussinessCentral.spec.js","","","","Test 2 -> @Delete",""
+"passed","Thu Nov 03 12:00:01 GMT 2022","Thu Nov 03 12:00:23 GMT 2022","21842","chromium","bussinessCentral.spec.js","","","","Test 1 -> @Create",""
+"passed","Thu Nov 03 12:00:23 GMT 2022","Thu Nov 03 12:00:23 GMT 2022","5","chromium","bussinessCentral.spec.js","","","","Test 2 -> @Delete",""
