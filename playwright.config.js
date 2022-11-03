@@ -10,64 +10,33 @@ const config = {
     timeout: 30000,
     toMatchSnapshot:{threshold:0.05}
   },
-  // retries:2,
-  //reporter: [ ['html', { outputFolder: './playwright-report/'+ ReportDate}]],
- //reporter: [ ['html', { outputFolder: './playwright-report/'}]],
+ // retries:2,
+  
  reporter: [['allure-playwright'],['./My-Reporter.js']],
-  //globalTeardown:require.resolve("./mailer.js"), 
+ 
   projects: [
     {   
       name : 'chromium',
   use: {
-    // viewport:{ width : 1563 ,
-    //   height: 754},
-    //...devices['Desktop Firefox'],
+
     viewport:{ width: 1280, height: 720 },
-    
+    //viewport:null,
     browserName :  'chromium',    
-
     headless : true,
-    
     ignoreHTTPSErrors: true,
-
-    screenshot : 'only-on-failure',
-
+    screenshot : 'on',
     trace : 'off',
-
     video: 'on',
-
     launchOptions : {
         args : ["--start-maximized"]
+    },
+    contextOptions: {
+      recordVideo: {
+        dir: 'videos/'
+      }
     }
   }
   }
-  // projects: [
-    
-  //   {   
-  //     name : 'chromium',
-  //     use: {
-  //       browserName:"chromium",
-  //       headless:false,
-  //       video: 'off'
-  //     }
-  //     },
-  //     {
-  //       name : 'webkit',
-  //       use: {
-  //         browserName:"webkit",
-  //         headless:true,
-  //         video: 'off'
-  //       }
-  //       },
-          
-  //       {
-  //         name : 'firefox',
-  //         use: {
-  //           browserName:"firefox",
-  //           headless:true,
-  //           video: 'off'
-  //         }
-  //         },
       
   ],
 };

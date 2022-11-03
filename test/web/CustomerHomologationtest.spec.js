@@ -48,20 +48,21 @@ test("@homologation Test 1 -> Creating Customer", async ({})=>
 }) 
   
 
-test("@homologation Test 2 -> CustomerHomologation Wrong CustomerNo and Correct Item Code", async ()=>
+test("@homologation Test 2 -> CustomerHomologation Invalid CustomerNo and Valid Item Code", async ()=>
 {    
 const AppFunctionsObj= new AppFunctions(topframe);
-await webActionObj.sleep(5000);
+await webActionObj.sleep(7000);
 await AppFunctionsObj.NavigatetoPage("Customers");
 await webActionObj.sleep(5000);
 const CustomerHomologationObj=new CustomerHomologation(topframe);
 await CustomerHomologationObj.NewCustomerHomologation();
 let Homplogationpagelocators= new locatorFinder("CustomerHomologationPage",topframe);
+await webActionObj.sleep(2000);
 await AppFunctionsObj.EnterText(await Homplogationpagelocators.getelement("HomologationNo"),CustomerHomologationData.logindata.WrongCustomerNo);
+await webActionObj.sleep(2000);
 await AppFunctionsObj.EnterText(await Homplogationpagelocators.getelement("HomologationItemCategoryCode"),CustomerHomologationData.logindata.CorrectItemCategoryCode);
 await AppFunctionsObj.EnterText(await Homplogationpagelocators.getelement("HomologationExpirationDate"),CustomerHomologationData.logindata.ExpiryDate); 
-console.log(await Homplogationpagelocators.getelement("CustomerNoErrorMsg"))
-await webActionObj.sleep(5000);
+await webActionObj.sleep(10000);
 await expect(await topframe.locator(await Homplogationpagelocators.getelement("CustomerNoErrorMsg")).count()).toEqual(1);
 await AppFunctionsObj.ClickElement(await Homplogationpagelocators.getelement("HomologationBack"));
 await webActionObj.sleep(5000);
@@ -72,19 +73,22 @@ let commonpagelocator=new locatorFinder("CommonPage",topframe);
 await AppFunctionsObj.ClickElement(await commonpagelocator.getelement("CompanyLogo"));
 })
 
-test("@homologation Test 3 -> CustomerHomologation Correct CustomerNo and Correct Item Code", async ()=>
+test("@homologation Test 3 -> CustomerHomologation Valid CustomerNo and Valid Item Code", async ()=>
   {     
   const AppFunctionsObj= new AppFunctions(topframe);
-  await webActionObj.sleep(5000);
+  await webActionObj.sleep(7000);
   await AppFunctionsObj.NavigatetoPage("Customers");
   await webActionObj.sleep(5000);
   const CustomerHomologationObj=new CustomerHomologation(topframe);
   await CustomerHomologationObj.NewCustomerHomologation();
   let Homplogationpagelocators= new locatorFinder("CustomerHomologationPage",topframe);
+  await webActionObj.sleep(2000);
   await AppFunctionsObj.EnterText(await Homplogationpagelocators.getelement("HomologationNo"),DataHandlertest.logindata.CustomerNo);
+  await webActionObj.sleep(2000);
   await AppFunctionsObj.EnterText(await Homplogationpagelocators.getelement("HomologationItemCategoryCode"),CustomerHomologationData.logindata.CorrectItemCategoryCode);
+  await webActionObj.sleep(2000);
   await AppFunctionsObj.EnterText(await Homplogationpagelocators.getelement("HomologationExpirationDate"),CustomerHomologationData.logindata.ExpiryDate); 
-  await webActionObj.sleep(7000);
+  await webActionObj.sleep(10000);
   await expect(await topframe.locator(await Homplogationpagelocators.getelement("OverallErrorMessage")).count()).toEqual(0);
   await AppFunctionsObj.ClickElement(await Homplogationpagelocators.getelement("HomologationBack"));
   await webActionObj.sleep(5000);
@@ -95,20 +99,22 @@ test("@homologation Test 3 -> CustomerHomologation Correct CustomerNo and Correc
   await AppFunctionsObj.ClickElement(await commonpagelocator.getelement("CompanyLogo"));
 })
 
-test("@homologation Test 4 -> CustomerHomologation Correct CustomerNo and Wrong Item Code", async ()=>
+test("@homologation Test 4 -> CustomerHomologation Valid CustomerNo and Invalid Item Code", async ()=>
 {     
 const AppFunctionsObj= new AppFunctions(topframe);
-await webActionObj.sleep(5000);
+await webActionObj.sleep(7000);
 await AppFunctionsObj.NavigatetoPage("Customers");
 await webActionObj.sleep(5000);
 const CustomerHomologationObj=new CustomerHomologation(topframe);
 await CustomerHomologationObj.NewCustomerHomologation();
 let Homplogationpagelocators= new locatorFinder("CustomerHomologationPage",topframe);
+await webActionObj.sleep(2000);
 await AppFunctionsObj.EnterText(await Homplogationpagelocators.getelement("HomologationNo"),DataHandlertest.logindata.CustomerNo);
+await webActionObj.sleep(2000);
 await AppFunctionsObj.EnterText(await Homplogationpagelocators.getelement("HomologationItemCategoryCode"),CustomerHomologationData.logindata.WrongItemCategoryCode);
+await webActionObj.sleep(2000);
 await AppFunctionsObj.EnterText(await Homplogationpagelocators.getelement("HomologationExpirationDate"),CustomerHomologationData.logindata.ExpiryDate); 
-console.log(await Homplogationpagelocators.getelement("ItemCategoryCodeErrorMsg"));
-await webActionObj.sleep(5000);
+await webActionObj.sleep(10000);
 await expect(await topframe.locator(await Homplogationpagelocators.getelement("ItemCategoryCodeErrorMsg")).count()).toEqual(1);
 await AppFunctionsObj.ClickElement(await Homplogationpagelocators.getelement("HomologationBack"));
 await webActionObj.sleep(5000);
@@ -120,19 +126,22 @@ await AppFunctionsObj.ClickElement(await commonpagelocator.getelement("CompanyLo
 
 })
 
-test("@homologation Test 5 -> CustomerHomologation Wrong CustomerNo and Wrong Item Code", async ()=>
+test("@homologation Test 5 -> CustomerHomologation Invalid CustomerNo and Invalid Item Code", async ()=>
 {     
 const AppFunctionsObj= new AppFunctions(topframe);
-await webActionObj.sleep(5000);
+await webActionObj.sleep(7000);
 await AppFunctionsObj.NavigatetoPage("Customers");
 await webActionObj.sleep(5000);
 const CustomerHomologationObj=new CustomerHomologation(topframe);
 await CustomerHomologationObj.NewCustomerHomologation();
 let Homplogationpagelocators= new locatorFinder("CustomerHomologationPage",topframe);
+await webActionObj.sleep(2000);
 await AppFunctionsObj.EnterText(await Homplogationpagelocators.getelement("HomologationNo"),CustomerHomologationData.logindata.WrongCustomerNo);
+await webActionObj.sleep(2000);
 await AppFunctionsObj.EnterText(await Homplogationpagelocators.getelement("HomologationItemCategoryCode"),CustomerHomologationData.logindata.WrongItemCategoryCode);
+await webActionObj.sleep(2000);
 await AppFunctionsObj.EnterText(await Homplogationpagelocators.getelement("HomologationExpirationDate"),CustomerHomologationData.logindata.ExpiryDate); 
-await webActionObj.sleep(5000);
+await webActionObj.sleep(10000);
 await expect(await topframe.locator(await Homplogationpagelocators.getelement("CustomerNoErrorMsg")).count()).toEqual(1);
 await expect(await topframe.locator(await Homplogationpagelocators.getelement("ItemCategoryCodeErrorMsg")).count()).toEqual(1);
 await AppFunctionsObj.ClickElement(await Homplogationpagelocators.getelement("HomologationBack"));
