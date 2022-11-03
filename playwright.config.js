@@ -7,20 +7,20 @@ const config = {
   timeout: 100 * 1000,
   fullyParallel: false,
   expect: {
-    timeout: 10000,
+    timeout: 30000,
     toMatchSnapshot:{threshold:0.05}
   },
+  // retries:2,
   //reporter: [ ['html', { outputFolder: './playwright-report/'+ ReportDate}]],
  //reporter: [ ['html', { outputFolder: './playwright-report/'}]],
-  reporter: [['allure-playwright'],['./My-Reporter.js']],
+ reporter: [['allure-playwright'],['./My-Reporter.js']],
   //globalTeardown:require.resolve("./mailer.js"), 
   projects: [
-    
     {   
       name : 'chromium',
       use: {
         browserName:"chromium",
-        headless:true,
+        headless:false,
         video: 'off'
       }
       },
@@ -33,14 +33,14 @@ const config = {
         }
         },
           
-        {
-          name : 'firefox',
-          use: {
-            browserName:"firefox",
-            headless:true,
-            video: 'off'
-          }
-          },
+  //       {
+  //         name : 'firefox',
+  //         use: {
+  //           browserName:"firefox",
+  //           headless:true,
+  //           video: 'off'
+  //         }
+  //         },
       
   ],
 };
