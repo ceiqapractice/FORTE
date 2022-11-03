@@ -14,16 +14,12 @@ class LoginPage{
     async LoginToApps()
     {
         let DataHandlertest=new dataHandler("LoginPage","web");
-        let LocatorFinderObj= new locatorFinder("Formv10byColorlibpage",this.page);
-        console.log("test");
-        console.log(LocatorFinderObj.locators.Formv10byColorlib_first_name);
-        console.log(DataHandlertest.getdata().Username);
-        await this.webActionsObj.enterText(await LocatorFinderObj.locators.Formv10byColorlib_first_name,DataHandlertest.getdata().Username);
-        await this.webActionsObj.enterText(await LocatorFinderObj.locators.Formv10byColorlib_last_name,DataHandlertest.getdata().Username);
-        await this.webActionsObj.enterText(await LocatorFinderObj.locators.Formv10byColorlib_company,DataHandlertest.getdata().Username);
-       // await this.webActionsObj.enterText(LoginElements.LetCodewithKoushik_email,DataHandlertest.getdata().Username);
-       // await this.webActionsObj.enterText(LoginElements.LetCodewithKoushik_password,DataHandlertest.getdata().Password);
-       //await this.webActionsObj.clickElement(LoginElements.LetCodewithKoushik_LoginBtn);    
+        let LocatorFinderObj= new locatorFinder("LoginPage",this.page);
+        await this.webActionsObj.enterText(await LocatorFinderObj.getelement("email"),DataHandlertest.logindata.Username);
+        await this.webActionsObj.clickElement(await LocatorFinderObj.getelement("submit"));
+        await this.webActionsObj.enterText(await LocatorFinderObj.getelement("password"),DataHandlertest.logindata.Password);
+        await this.webActionsObj.clickElement(await LocatorFinderObj.getelement("submit"));
+        await this.webActionsObj.clickElement(await LocatorFinderObj.getelement("Yes"));
     }
 }
 module.exports={LoginPage}

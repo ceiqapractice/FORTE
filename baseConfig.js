@@ -10,7 +10,7 @@ const testConfig=
         "baseURL":"https://www.ceiamerica.com/",
         "visualComparisonDate":"20220902135418",
         "linksToSkip":["https://www.facebook.com","https://twitter.com","https://www.linkedin.com","https://www.ceiamerica.com/wp","https://share.hsforms.com/","https://js.hs-scripts.com/","https://fonts.googleapis.com/","https://www.googletagmanager.com/"],
-        "Env":"dev",
+        "Env":"",
         "Language":"",
         "elementFinderURL":"https://colorlib.com/etc/regform/colorlib-regform-36/",
         //Mail COnfigurations

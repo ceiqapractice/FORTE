@@ -1,8 +1,9 @@
 {
-    "CustomerName":"Devuser",
+    "CustomerName":"Devuser Test",
+    "CustomerNo":"C03239",
     "CustomerAddress":"Chennai",
     "CustomerPhone":"999999999",
-    "CustomerEmail":"test@gmail.com",
+    "CustomerEmail":"test124@gmail.com",
     "CustomerState":"TN",
     "CustomerItemCate":"CM_COMMER",
     "ItemExpiryDate":"10/3/2022"

@@ -18,6 +18,7 @@ class dataHandler{
     else{
         console.log("Data files are not present for this " +moduletype+ " module");
     }
+    this.logindata=logindata;
     }
 
 getdata(){

@@ -7,40 +7,67 @@ const config = {
   timeout: 100 * 1000,
   fullyParallel: false,
   expect: {
-    timeout: 10000,
+    timeout: 30000,
     toMatchSnapshot:{threshold:0.05}
   },
+  // retries:2,
   //reporter: [ ['html', { outputFolder: './playwright-report/'+ ReportDate}]],
  //reporter: [ ['html', { outputFolder: './playwright-report/'}]],
-  reporter: [['allure-playwright'],['./My-Reporter.js']],
+ reporter: [['allure-playwright'],['./My-Reporter.js']],
   //globalTeardown:require.resolve("./mailer.js"), 
   projects: [
-    
     {   
       name : 'chromium',
-      use: {
-        browserName:"chromium",
-        headless:false,
-        video: 'off'
-      }
-      },
-      {
-        name : 'webkit',
-        use: {
-          browserName:"webkit",
-          headless:true,
-          video: 'off'
-        }
-        },
+  use: {
+    // viewport:{ width : 1563 ,
+    //   height: 754},
+    //...devices['Desktop Firefox'],
+    viewport:{ width: 1280, height: 720 },
+    
+    browserName :  'chromium',    
+
+    headless : true,
+    
+    ignoreHTTPSErrors: true,
+
+    screenshot : 'only-on-failure',
+
+    trace : 'off',
+
+    video: 'on',
+
+    launchOptions : {
+        args : ["--start-maximized"]
+    }
+  }
+  }
+  // projects: [
+    
+  //   {   
+  //     name : 'chromium',
+  //     use: {
+  //       browserName:"chromium",
+  //       headless:false,
+  //       video: 'off'
+  //     }
+  //     },
+  //     {
+  //       name : 'webkit',
+  //       use: {
+  //         browserName:"webkit",
+  //         headless:true,
+  //         video: 'off'
+  //       }
+  //       },
           
-        {
-          name : 'firefox',
-          use: {
-            browserName:"firefox",
-            headless:true,
-            video: 'off'
-          }
-          },
+  //       {
+  //         name : 'firefox',
+  //         use: {
+  //           browserName:"firefox",
+  //           headless:true,
+  //           video: 'off'
+  //         }
+  //         },
       
   ],
 };
